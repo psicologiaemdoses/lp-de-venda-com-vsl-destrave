@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Destrave — LP de Venda Direta A (VSL)</title>
+<title>Destrave: LP de Venda Direta A (VSL)</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -54,6 +54,19 @@
     width: 100%; max-width: 300px; aspect-ratio: 9/16;
     border-radius: 18px; margin-top: 6px; overflow: hidden; position: relative;
   }
+  @keyframes revealUp {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .reveal { opacity: 0; }
+  .reveal.is-visible { animation: revealUp .6s ease-out forwards; }
+  .guarantee-seal {
+    flex: none; width: 56px; height: 56px; border-radius: 50%;
+    background: var(--lime); color: var(--ink);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 10px; font-weight: 800; line-height: 1.2; text-align: center;
+    letter-spacing: .3px; border: 2px solid var(--cream);
+  }
 </style>
 </head>
 <body>
@@ -65,20 +78,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div style="width: 100%; color: var(--ink); overflow-x: hidden; position: relative;">
 
-  <!-- HERO / DOBRA 1 — vídeo ocupa a dobra inteira, sem menu, sem link de saída -->
+  <!-- HERO / DOBRA 1 - vídeo ocupa a dobra inteira, sem menu, sem link de saída -->
   <div class="grid-bg" style="width: 100%; padding: 44px 24px 56px; box-sizing: border-box;">
     <div style="max-width: 620px; margin: 0 auto; display: flex; flex-direction: column; gap: 18px; align-items: center; text-align: center;">
 
-      <div style="background: var(--ink); color: var(--white); font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 700; padding: 8px 18px; border-radius: 20px; max-width: 420px;">para psicólogas e terapeutas que já atendem, mas ainda dependem de indicação</div>
+      <div style="background: var(--ink); color: var(--white); font-size: 12px; letter-spacing: .3px; font-weight: 600; padding: 10px 22px; border-radius: 10px; max-width: 480px; line-height: 1.5;">Para psicólogas e terapeutas que já atendem, mas ainda dependem de indicação</div>
 
-      <h1 style="margin: 0; font-family: 'Sora', sans-serif; font-weight: 800; font-size: 30px; line-height: 1.32; color: var(--ink); max-width: 480px;">a paciente que mais precisa de você já esteve no seu <span style="background: var(--lime); padding: 2px 8px; border-radius: 4px;">perfil, e foi embora sem avisar</span></h1>
+      <h1 style="margin: 0; font-family: 'Sora', sans-serif; font-weight: 800; font-size: 30px; line-height: 1.32; color: var(--ink); max-width: 480px;">A paciente que mais precisa de você já esteve no seu <span style="background: var(--lime); padding: 2px 8px; border-radius: 4px;">perfil, e foi embora sem avisar</span></h1>
 
-      <p style="margin: 0; font-size: 15px; line-height: 1.7; color: var(--ink-soft); font-weight: 500; max-width: 460px;">sua foto está boa. seu conteúdo também. o motivo é mais específico do que isso, e nos próximos minutos você entende exatamente o que é.</p>
+      <p style="margin: 0; font-size: 15px; line-height: 1.8; color: var(--ink-soft); font-weight: 500; max-width: 460px;"><span style="color: var(--ink); font-weight: 700;">Sua foto está boa. Seu conteúdo também.</span><br>O motivo é mais específico do que isso, e nos próximos minutos você entende exatamente o que é.</p>
 
       <!--
         VTurb: cole aqui o embed exportado do player (o "smartplayer" com o
         vturb-id do vídeo). O player do VTurb já cuida da exibição do botão
-        de oferta no ponto certo do vídeo — não duplicar isso na página.
+        de oferta no ponto certo do vídeo - não duplicar isso na página.
         Manter o wrapper .vturb-wrap (300px, 9:16) pra não pular layout
         (CLS) enquanto o script do player carrega.
       -->
@@ -86,73 +99,77 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <span style="font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--lime); font-weight: 700; text-align: center; padding: 0 20px;">[ player vturb aqui ]</span>
       </div>
 
-      <p style="margin: 4px 0 0; font-size: 13px; line-height: 1.7; color: var(--ink-soft); font-weight: 500; max-width: 420px;">assista até o fim, tem um presente escondido lá que só faz sentido depois do resto.</p>
+      <p style="margin: 4px 0 0; font-size: 13px; line-height: 1.7; color: var(--ink-soft); font-weight: 500; max-width: 420px;">Assista até o fim, tem um presente escondido lá que só faz sentido depois do resto.</p>
 
-      <a href="#oferta" class="cta" data-cta="hero" style="margin-top: 8px;">quero arrumar meu perfil agora →</a>
+      <a href="#oferta" class="cta" data-cta="hero" style="margin-top: 8px;">Quero arrumar meu perfil agora →</a>
 
-      <p style="margin: 0; font-size: 12.5px; color: var(--ink-soft); opacity: .85;">acesso imediato por e-mail e whatsapp. garantia de 7 dias.</p>
+      <p style="margin: 0; font-size: 12.5px; color: var(--ink-soft); opacity: .85;">Acesso imediato por e-mail e WhatsApp. Garantia de 7 dias.</p>
     </div>
   </div>
 
-  <!-- DOBRA 2 — mecanismo, o que está incluso, preço -->
+  <!-- DOBRA 2 - mecanismo, o que está incluso, preço -->
   <div class="grid-bg" style="width: 100%; padding: 56px 24px 64px; box-sizing: border-box; border-top: 1px solid rgba(21,20,14,.08);">
     <div style="max-width: 580px; margin: 0 auto; display: flex; flex-direction: column; gap: 32px;">
 
       <div style="display: flex; flex-direction: column; gap: 10px; text-align: center;">
-        <h2 style="margin: 0; font-family: 'Sora', sans-serif; font-weight: 800; font-size: 26px; line-height: 1.3; color: var(--ink);">o que muda quando o seu perfil vira consultório</h2>
+        <h2 style="margin: 0; font-family: 'Sora', sans-serif; font-weight: 800; font-size: 26px; line-height: 1.3; color: var(--ink); text-align: center;">O que muda quando o seu perfil vira <span style="background: var(--lime); padding: 2px 8px; border-radius: 4px;">consultório</span>?</h2>
       </div>
 
       <!-- etapas -->
       <div style="display: flex; flex-direction: column; gap: 12px;">
         <div style="background: var(--cream-card); border: 1px solid rgba(21,20,14,.12); border-radius: 12px; padding: 18px 20px; display: flex; gap: 14px; align-items: flex-start;">
           <div style="flex: none; width: 28px; height: 28px; border-radius: 50%; background: var(--ink); color: var(--lime); font-size: 13px; font-weight: 800; display: flex; align-items: center; justify-content: center;">1</div>
-          <div style="font-size: 14px; line-height: 1.7; color: var(--ink); font-weight: 500;"><strong>perfil consultório:</strong> em três segundos a pessoa certa já sabe que está no lugar dela.</div>
+          <div style="font-size: 14px; line-height: 1.7; color: var(--ink); font-weight: 500;"><strong>Perfil consultório:</strong> em três segundos a pessoa certa já sabe que está no lugar dela.</div>
         </div>
         <div style="background: var(--cream-card); border: 1px solid rgba(21,20,14,.12); border-radius: 12px; padding: 18px 20px; display: flex; gap: 14px; align-items: flex-start;">
           <div style="flex: none; width: 28px; height: 28px; border-radius: 50%; background: var(--ink); color: var(--lime); font-size: 13px; font-weight: 800; display: flex; align-items: center; justify-content: center;">2</div>
-          <div style="font-size: 14px; line-height: 1.7; color: var(--ink); font-weight: 500;"><strong>conteúdo de reconhecimento:</strong> ela para de rolar porque se reconhece no que você escreveu.</div>
+          <div style="font-size: 14px; line-height: 1.7; color: var(--ink); font-weight: 500;"><strong>Conteúdo de reconhecimento:</strong> ela para de rolar porque se reconhece no que você escreveu.</div>
         </div>
         <div style="background: var(--cream-card); border: 1px solid rgba(21,20,14,.12); border-radius: 12px; padding: 18px 20px; display: flex; gap: 14px; align-items: flex-start;">
           <div style="flex: none; width: 28px; height: 28px; border-radius: 50%; background: var(--ink); color: var(--lime); font-size: 13px; font-weight: 800; display: flex; align-items: center; justify-content: center;">3</div>
-          <div style="font-size: 14px; line-height: 1.7; color: var(--ink); font-weight: 500;"><strong>condução até a sessão:</strong> a conversa no direct vira sessão marcada, em vez de ficar só na conversa.</div>
+          <div style="font-size: 14px; line-height: 1.7; color: var(--ink); font-weight: 500;"><strong>Condução até a sessão:</strong> a conversa no direct vira sessão marcada, em vez de ficar só na conversa.</div>
         </div>
       </div>
 
       <!-- o que você recebe -->
       <div style="display: flex; flex-direction: column; gap: 14px;">
-        <div style="font-size: 15px; font-weight: 700; color: var(--ink);">dentro do destrave você recebe:</div>
+        <div style="font-size: 15px; font-weight: 700; color: var(--ink);">Dentro do destrave você recebe:</div>
         <div style="display: flex; flex-direction: column; gap: 10px;">
-          <div style="font-size: 13.5px; line-height: 1.7; color: var(--ink-soft);"><strong style="color: var(--ink);">a auditoria do perfil álbum</strong>, o checklist que aponta o que hoje está afastando paciente do seu perfil.</div>
-          <div style="font-size: 13.5px; line-height: 1.7; color: var(--ink-soft);"><strong style="color: var(--ink);">o mapa de dores</strong>, pra escrever com as palavras que a sua paciente usa, não com as palavras da sua formação.</div>
-          <div style="font-size: 13.5px; line-height: 1.7; color: var(--ink-soft);"><strong style="color: var(--ink);">os roteiros de reconhecimento</strong>, a estrutura pronta pra reels, carrossel e post estático.</div>
-          <div style="font-size: 13.5px; line-height: 1.7; color: var(--ink-soft);"><strong style="color: var(--ink);">a condução do direct</strong>, o modelo de primeira resposta e a pergunta que separa quem precisa de verdade de quem só está curiosa.</div>
-          <div style="font-size: 13.5px; line-height: 1.7; color: var(--ink-soft);"><strong style="color: var(--ink);">o posicionamento que sustenta o preço</strong>, pra ninguém mais perguntar se você faz por menos.</div>
+          <div style="font-size: 13.5px; line-height: 1.7; color: var(--ink-soft);"><strong style="color: var(--ink);">A auditoria do perfil álbum</strong>, o checklist que aponta o que hoje está afastando paciente do seu perfil.</div>
+          <div style="font-size: 13.5px; line-height: 1.7; color: var(--ink-soft);"><strong style="color: var(--ink);">O mapa de dores</strong>, pra escrever com as palavras que a sua paciente usa, não com as palavras da sua formação.</div>
+          <div style="font-size: 13.5px; line-height: 1.7; color: var(--ink-soft);"><strong style="color: var(--ink);">Os roteiros de reconhecimento</strong>, a estrutura pronta pra reels, carrossel e post estático.</div>
+          <div style="font-size: 13.5px; line-height: 1.7; color: var(--ink-soft);"><strong style="color: var(--ink);">A condução do direct</strong>, o modelo de primeira resposta e a pergunta que separa quem precisa de verdade de quem só está curiosa.</div>
+          <div style="font-size: 13.5px; line-height: 1.7; color: var(--ink-soft);"><strong style="color: var(--ink);">O posicionamento que sustenta o preço</strong>, pra ninguém mais perguntar se você faz por menos.</div>
         </div>
       </div>
 
-      <!-- bônus -->
-      <div style="border-left: 3px solid var(--coral); padding-left: 16px; font-size: 14px; color: var(--ink-soft); line-height: 1.7;">e ainda três bônus: os 15 dias de conteúdo, o kit de imagem com ia e o resgate, pra reconectar com quem já te chamou e sumiu.</div>
+      <!-- bônus: destaque reforçado (cartão + selo + revelação suave ao entrar na tela) -->
+      <div class="reveal" style="background: var(--lime-soft); border-left: 4px solid var(--coral); border-radius: 0 12px 12px 0; padding: 18px 20px; display: flex; gap: 14px; align-items: center;">
+        <div style="flex: none; font-size: 26px; line-height: 1;">🎁</div>
+        <div style="font-size: 14.5px; color: var(--ink); line-height: 1.7; font-weight: 600;">E ainda três bônus: os 15 dias de conteúdo, o kit de imagem com IA e o resgate, pra reconectar com quem já te chamou e sumiu.</div>
+      </div>
 
       <!-- preço -->
       <div id="oferta" style="background: var(--ink); border-radius: 16px; padding: 32px 24px; display: flex; flex-direction: column; gap: 14px; align-items: center; text-align: center;">
-        <p style="margin: 0; font-size: 13.5px; line-height: 1.7; color: var(--cream); opacity: .8; max-width: 380px;">separado, tudo isso passa de mil e trezentos reais.</p>
-        <div style="display: flex; align-items: baseline; gap: 10px;">
-          <span style="font-size: 15px; color: var(--cream); opacity: .5; text-decoration: line-through; text-decoration-color: var(--coral); text-decoration-thickness: 2px;">R$697</span>
-          <span style="font-size: 15px; color: var(--cream); opacity: .5; text-decoration: line-through; text-decoration-color: var(--coral); text-decoration-thickness: 2px;">R$600</span>
+        <p style="margin: 0; font-size: 13.5px; line-height: 1.7; color: var(--cream); opacity: .8; max-width: 380px;">Separado, tudo isso passa de mil e trezentos reais.</p>
+        <div style="display: flex; align-items: baseline; gap: 12px;">
+          <span style="font-size: 19px; font-weight: 700; color: var(--cream); opacity: .85; text-decoration: line-through; text-decoration-color: var(--coral); text-decoration-thickness: 2px;">R$697</span>
+          <span style="font-size: 19px; font-weight: 700; color: var(--cream); opacity: .85; text-decoration: line-through; text-decoration-color: var(--coral); text-decoration-thickness: 2px;">R$600</span>
         </div>
-        <div style="font-family: 'Sora', sans-serif; font-weight: 800; font-size: 52px; color: var(--white); line-height: 1;">R$297</div>
+        <div style="font-family: 'Sora', sans-serif; font-weight: 800; font-size: 42px; color: var(--white); line-height: 1;">R$297</div>
         <div style="font-size: 12.5px; color: var(--cream); opacity: .65;">à vista, ou 12x de R$29,82</div>
         <!-- TODO (PROJETO.md): trocar pelo link real de checkout. -->
-        <a href="#checkout-pendente" class="cta" data-cta="oferta" data-checkout style="margin-top: 6px;">quero entrar no destrave →</a>
+        <a href="#checkout-pendente" class="cta" data-cta="oferta" data-checkout style="margin-top: 6px;">Quero entrar no destrave →</a>
       </div>
 
     </div>
   </div>
 
-  <!-- DOBRA 3 — garantia, objeções, fechamento -->
-  <div style="width: 100%; background: var(--ink); padding: 52px 24px; box-sizing: border-box;">
-    <div style="max-width: 540px; margin: 0 auto; text-align: center;">
-      <p style="margin: 0; font-size: 15px; line-height: 1.8; color: var(--white); font-weight: 500;">garantia de 7 dias: você entra, faz a auditoria do perfil hoje, e se não fizer sentido, pede o dinheiro de volta. sem burocracia, é a lei, e o risco é todo nosso.</p>
+  <!-- DOBRA 3 - garantia, objeções, fechamento -->
+  <div style="width: 100%; background: var(--ink); padding: 48px 24px; box-sizing: border-box;">
+    <div style="max-width: 480px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 16px; text-align: center;">
+      <div class="guarantee-seal">7 DIAS<br>GARANTIA</div>
+      <p style="margin: 0; font-size: 15px; line-height: 1.8; color: var(--white); font-weight: 500;">Garantia de 7 dias: você entra, faz a auditoria do perfil hoje, e se não fizer sentido, pede o dinheiro de volta. Sem burocracia, é a lei, e o risco é todo nosso.</p>
     </div>
   </div>
 
@@ -160,28 +177,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div style="max-width: 560px; margin: 0 auto; display: flex; flex-direction: column; gap: 34px;">
 
       <div style="display: flex; flex-direction: column; gap: 14px;">
-        <div style="font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--coral); font-weight: 700; text-align: center;">perguntas frequentes</div>
+        <div style="display: inline-flex; align-self: center; background: var(--coral); color: var(--white); font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; font-weight: 700; padding: 7px 18px; border-radius: 20px;">Perguntas frequentes</div>
 
         <div style="display: flex; flex-direction: column; gap: 12px;">
           <div style="background: var(--cream-card); border: 1px solid rgba(21,20,14,.12); border-radius: 12px; padding: 20px 22px;">
-            <div style="font-size: 14px; font-weight: 700; color: var(--ink); margin-bottom: 8px;">funciona pra minha abordagem?</div>
-            <div style="font-size: 13px; line-height: 1.7; color: var(--ink-soft);">funciona, porque o que enche uma agenda é como a pessoa do outro lado decide procurar ajuda. isso vale igual pra trg, hipnose, constelação, terapia corporal ou análise.</div>
+            <div style="font-size: 14px; font-weight: 700; color: var(--ink); margin-bottom: 8px;">Funciona pra minha abordagem?</div>
+            <div style="font-size: 13px; line-height: 1.7; color: var(--ink-soft);">Funciona, porque o que enche uma agenda é como a pessoa do outro lado decide procurar ajuda. Isso vale igual pra TRG, hipnose, constelação, terapia corporal ou análise.</div>
           </div>
           <div style="background: var(--cream-card); border: 1px solid rgba(21,20,14,.12); border-radius: 12px; padding: 20px 22px;">
-            <div style="font-size: 14px; font-weight: 700; color: var(--ink); margin-bottom: 8px;">preciso ter seguidor?</div>
-            <div style="font-size: 13px; line-height: 1.7; color: var(--ink-soft);">não. tem perfil de oito mil seguidores com agenda cheia e perfil de cinquenta mil com agenda vazia. o que enche agenda é a pessoa certa se reconhecendo no que você fala.</div>
+            <div style="font-size: 14px; font-weight: 700; color: var(--ink); margin-bottom: 8px;">Preciso ter seguidor?</div>
+            <div style="font-size: 13px; line-height: 1.7; color: var(--ink-soft);">Não. Tem perfil de oito mil seguidores com agenda cheia e perfil de cinquenta mil com agenda vazia. O que enche agenda é a pessoa certa se reconhecendo no que você fala.</div>
           </div>
           <div style="background: var(--cream-card); border: 1px solid rgba(21,20,14,.12); border-radius: 12px; padding: 20px 22px;">
-            <div style="font-size: 14px; font-weight: 700; color: var(--ink); margin-bottom: 8px;">vou ter que aparecer todo dia?</div>
-            <div style="font-size: 13px; line-height: 1.7; color: var(--ink-soft);">não, você posta menos e cada post trabalha mais.</div>
+            <div style="font-size: 14px; font-weight: 700; color: var(--ink); margin-bottom: 8px;">Vou ter que aparecer todo dia?</div>
+            <div style="font-size: 13px; line-height: 1.7; color: var(--ink-soft);">Não, você posta menos e cada post trabalha mais.</div>
           </div>
         </div>
       </div>
 
       <div style="text-align: center; display: flex; flex-direction: column; gap: 18px; align-items: center;">
-        <p style="margin: 0; font-size: 15px; line-height: 1.8; color: var(--ink); font-weight: 600; max-width: 460px;">você já estudou, já se formou, já fez supervisão. faltou alguém te contar que o seu perfil estava afastando as pessoas antes delas te ouvirem.</p>
+        <p style="margin: 0; font-size: 15px; line-height: 1.8; color: var(--ink); font-weight: 600; max-width: 460px;">Você já estudou, já se formou, já fez supervisão. Faltou alguém te contar que o seu perfil estava afastando as pessoas antes delas te ouvirem.</p>
         <!-- TODO (PROJETO.md): trocar pelo link real de checkout. -->
-        <a href="#checkout-pendente" class="cta" data-cta="fechamento" data-checkout>quero destravar minha captação →</a>
+        <a href="#checkout-pendente" class="cta" data-cta="fechamento" data-checkout>Quero destravar minha captação →</a>
       </div>
     </div>
   </div>
@@ -189,7 +206,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- FOOTER -->
   <div style="width: 100%; background: var(--ink); padding: 28px 24px 48px; box-sizing: border-box;">
     <div style="max-width: 560px; margin: 0 auto; text-align: center; display: flex; flex-direction: column; gap: 6px;">
-      <div style="font-family: 'Sora', sans-serif; font-weight: 700; font-size: 14px; color: var(--white);">destrave a captação de pacientes</div>
+      <div style="font-family: 'Sora', sans-serif; font-weight: 700; font-size: 14px; color: var(--white);">Destrave a captação de pacientes</div>
       <div style="font-size: 10px; letter-spacing: 1px; color: var(--cream); opacity: .5;">[ razão social · cnpj · endereço, quando definidos ]</div>
     </div>
   </div>
@@ -206,6 +223,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script>
 (function () {
   window.dataLayer = window.dataLayer || [];
+
+  // Revelação suave dos blocos .reveal quando entram na tela.
+  if ('IntersectionObserver' in window) {
+    var revealTargets = document.querySelectorAll('.reveal');
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: .2 });
+    revealTargets.forEach(function (el) { observer.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('is-visible'); });
+  }
 
   // Placeholder de link de checkout, até o PROJETO.md trazer o definitivo.
   var CHECKOUT_URL = null; // TODO: ex. 'https://pay.exemplo.com/destrave'

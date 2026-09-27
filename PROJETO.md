@@ -28,7 +28,7 @@ A skill lê este arquivo antes de todo trabalho. Preencha uma vez e mantenha em 
 ## Medição
 
 - **Container do GTM** (`GTM-XXXXXXX`) e quem pode publicar: pendente — o código já está com o snippet do GTM instalado, mas com `GTM-XXXXXXX` de placeholder até o id real chegar
-- **Projeto do Clarity** (id) e conta dona: pendente — ainda não instalado
+- **Projeto do Clarity** (id) e conta dona: `yp3175pi2j` — instalado no `index.html`, conta dona pendente de confirmação
 - **Banner de consentimento (LGPD)?** pendente
 - **Evento de conversão padrão:** `begin_checkout` (página de venda direta, sem formulário — o clique no CTA da oferta manda direto pro checkout)
 - **Outros eventos de conversão:** `cta_click` em cada botão (`hero`, `oferta`, `fechamento`) como evento de intenção

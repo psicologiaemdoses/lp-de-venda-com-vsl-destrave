@@ -42,7 +42,7 @@ A skill lê este arquivo antes de todo trabalho. Preencha uma vez e mantenha em 
 
 - **Link de checkout (Destrave, `destrave-a`):** Hotmart, `https://pay.hotmart.com/I107780246C?off=mz614nlu&checkoutMode=10` — configurado no `index.html` (`CHECKOUT_URL` e nos dois botões de oferta/fechamento).
 - **Link de checkout (Comunidade Prime, `oportunidade-a`):** Hotmart, `https://pay.hotmart.com/Y105420731T?off=m2w6q7px&checkoutMode=10` — botão único da dobra 2 (`data-checkout="true"`), dispara `begin_checkout` no clique, antes do redirecionamento.
-- **Onde a VSL está hospedada:** VTurb. O player fica embutido no bloco `#vturb-video` do `index.html`; falta colar o embed real exportado do VTurb.
+- **Onde a VSL está hospedada:** VTurb. Player real embutido no bloco `#vturb-video` do `destrave-a/index.html` (vturb-id `vid-6abadae9e37052a285edc6d5`), com os preloads/dns-prefetch de velocidade do VTurb no `<head>`.
 - **Botão de oferta dentro do vídeo:** é o próprio VTurb que exibe o botão no momento certo do vídeo (configurado lá). Por isso a barra fixa de preço + botão que aparecia desde a entrada da página foi removida do `index.html` — ela fazia o preço aparecer antes da hora.
 - **Pendente de confirmação (Comunidade Prime):** a lista "o que você recebe" em `oportunidade-a/index.html` é um rascunho baseado no registro do ecossistema (rebrand Método PRIME → Comunidade Prime). Confirmar com a Nathália o texto final do formato de entrega antes de escalar tráfego pago pra essa página (marcado com TODO no HTML).
 

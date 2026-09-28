@@ -6,6 +6,17 @@
 <meta name="robots" content="noindex, nofollow">
 <title>Destrave: LP de Venda Direta A (VSL)</title>
 
+<!-- VTurb: código de otimização de velocidade de carregamento do player -->
+<script>!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);</script>
+<link rel="preload" href="https://scripts.converteai.net/da76c018-d703-44a4-9a6a-f49729aa36aa/players/6abadae9e37052a285edc6d5/v4/player.js" as="script">
+<link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" as="script">
+<link rel="preload" href="https://cdn.converteai.net/da76c018-d703-44a4-9a6a-f49729aa36aa/6abad93ce37052a285edc524/main.m3u8" as="fetch">
+<link rel="dns-prefetch" href="https://cdn.converteai.net">
+<link rel="dns-prefetch" href="https://scripts.converteai.net">
+<link rel="dns-prefetch" href="https://images.converteai.net">
+<link rel="dns-prefetch" href="https://license.vturb.com">
+<!-- Fim VTurb: código de velocidade -->
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -99,14 +110,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p style="margin: 0; font-size: 15px; line-height: 1.8; color: var(--ink-soft); font-weight: 500; max-width: 460px;"><span style="color: var(--ink); font-weight: 700;">Sua foto está boa, seu conteúdo também.</span><br>O motivo é mais específico do que isso, e nos próximos minutos você entende exatamente o que é.</p>
 
       <!--
-        VTurb: cole aqui o embed exportado do player (o "smartplayer" com o
-        vturb-id do vídeo). O player do VTurb já cuida da exibição do botão
-        de oferta no ponto certo do vídeo - não duplicar isso na página.
+        VTurb: player real embutido (vturb-id vid-6abadae9e37052a285edc6d5).
+        O player do VTurb já cuida da exibição do botão de oferta no ponto
+        certo do vídeo - não duplicar isso na página.
         Manter o wrapper .vturb-wrap (300px, 9:16) pra não pular layout
         (CLS) enquanto o script do player carrega.
       -->
-      <div id="vturb-video" class="vturb-wrap" style="background: var(--ink); display: flex; align-items: center; justify-content: center;">
-        <span style="font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--lime); font-weight: 700; text-align: center; padding: 0 20px;">[ player vturb aqui ]</span>
+      <div id="vturb-video" class="vturb-wrap">
+        <vturb-smartplayer id="vid-6abadae9e37052a285edc6d5" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"><div class="vturb-player-placeholder" style="position: relative; width: 100%; padding: 177.77777777777777% 0 0; z-index: 0; background-color: black;"></div></vturb-smartplayer>
+        <script type="text/javascript">
+          var s = document.createElement("script");
+          s.src = "https://scripts.converteai.net/da76c018-d703-44a4-9a6a-f49729aa36aa/players/6abadae9e37052a285edc6d5/v4/player.js";
+          s.async = true;
+          document.head.appendChild(s);
+        </script>
       </div>
 
       <p style="margin: 4px 0 0; font-size: 13px; line-height: 1.7; color: var(--ink-soft); font-weight: 500; max-width: 420px;">Assista até o fim, tem um presente escondido lá que só faz sentido depois do resto.</p>

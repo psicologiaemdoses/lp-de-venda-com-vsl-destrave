@@ -40,9 +40,11 @@ A skill lê este arquivo antes de todo trabalho. Preencha uma vez e mantenha em 
 
 ## Checkout
 
-- **Link de checkout:** Hotmart, `https://pay.hotmart.com/I107780246C?off=mz614nlu&checkoutMode=10` — configurado no `index.html` (`CHECKOUT_URL` e nos dois botões de oferta/fechamento).
+- **Link de checkout (Destrave, `destrave-a`):** Hotmart, `https://pay.hotmart.com/I107780246C?off=mz614nlu&checkoutMode=10` — configurado no `index.html` (`CHECKOUT_URL` e nos dois botões de oferta/fechamento).
+- **Link de checkout (Comunidade Prime, `upsell-a`):** Hotmart, `https://pay.hotmart.com/Y105420731T?off=m2w6q7px&checkoutMode=10` — botão único da dobra 2 (`data-checkout="true"`), dispara `begin_checkout` no clique, antes do redirecionamento.
 - **Onde a VSL está hospedada:** VTurb. O player fica embutido no bloco `#vturb-video` do `index.html`; falta colar o embed real exportado do VTurb.
 - **Botão de oferta dentro do vídeo:** é o próprio VTurb que exibe o botão no momento certo do vídeo (configurado lá). Por isso a barra fixa de preço + botão que aparecia desde a entrada da página foi removida do `index.html` — ela fazia o preço aparecer antes da hora.
+- **Pendente de confirmação (Comunidade Prime):** a lista "o que você recebe" em `upsell-a/index.html` é um rascunho baseado no registro do ecossistema (rebrand Método PRIME → Comunidade Prime). Confirmar com a Nathália o texto final do formato de entrega antes de escalar tráfego pago pra essa página (marcado com TODO no HTML).
 
 ## Anúncio
 
@@ -65,3 +67,4 @@ A skill lê este arquivo antes de todo trabalho. Preencha uma vez e mantenha em 
 |---|---|---|---|---|
 | `psicologiaemdoses.com.br/fped-003/destrave-a` | Venda direta do Destrave (VSL) | `begin_checkout` | 2026-09-27 | publicada, GTM ainda com id placeholder |
 | `psicologiaemdoses.com.br/fped-003/boas-vindas-a-vdobg` | Página de obrigado pós-compra do Destrave (confirmação + primeira ação, sem formulário) | não se aplica — conversão já disparou no checkout; aqui só `page_view` padrão | 2026-09-27 | publicada, GTM ainda com id placeholder |
+| `psicologiaemdoses.com.br/fped-003/upsell-a` | OTO pós-checkout do Destrave: upsell direto pra Comunidade Prime (R$997 de R$1.500, 12 meses), 1 botão só | `begin_checkout` no clique do botão de compra, antes do redirecionamento pro checkout Hotmart | 2026-09-27 | publicada, GTM com id placeholder e lista de entrega da Comunidade Prime pendente de confirmação com a Nathália |

@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Antes de você sair: Comunidade Prime</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Fraunces:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
+
+<!-- Google Tag Manager
+     TODO (PROJETO.md): trocar GTM-XXXXXXX pelo container real do projeto. -->
+<script>
+(function (w, d, s, l, i) {
+  w[l] = w[l] || [];
+  w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+  var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+  j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+  f.parentNode.insertBefore(j, f);
+})(window, document, 'script', 'dataLayer', 'GTM-XXXXXXX');
+</script>
+<!-- End Google Tag Manager -->
+
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "yp3175pi2j");
+</script>
+<!-- End Microsoft Clarity -->
+
+<style>
+  :root {
+    --cream: #FDF6E3;
+    --cream-card: #FFFDF6;
+    --ink: #15140E;
+    --ink-soft: #4A4A40;
+    --cafe: #1E1009;
+    --cafe-soft: #3B2112;
+    --cafe-softer: #2A160B;
+    --gold: #D4A847;
+    --gold-light: #E3C567;
+    --coral: #D9486A;
+    --lime: #E7ED4D;
+    --white: #FFFFFF;
+  }
+  html { overflow-x: clip; }
+  body {
+    margin: 0; font-family: 'Sora', sans-serif; background-color: var(--cafe);
+    color: var(--ink);
+  }
+  * { box-sizing: border-box; }
+  a { color: inherit; }
+  em, .accent { font-family: 'Fraunces', serif; font-style: italic; font-weight: 600; }
+  .wrap { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+  .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
+  .reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+  .topbar {
+    background: var(--cafe-softer); color: var(--cream);
+    padding: 14px 0; text-align: center;
+    font-size: 13px; letter-spacing: .06em; text-transform: uppercase; font-weight: 600;
+    position: relative; z-index: 3;
+  }
+  .topbar span { color: var(--gold-light); }
+
+  /* DOBRA 1: hero grande, foto sangrando no fundo café */
+  .hero {
+    position: relative; background: var(--cafe); color: var(--cream);
+    overflow: hidden; min-height: 86vh; display: flex; align-items: center;
+    padding: 64px 0;
+  }
+  .hero-photo-bleed {
+    position: absolute; inset: 0 0 0 auto; width: 56%; height: 100%;
+    -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.5) 12%, #000 30%);
+    mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.5) 12%, #000 30%);
+  }
+  .hero-photo-bleed img {
+    width: 100%; height: 100%; object-fit: cover; object-position: 60% 20%;
+    filter: saturate(.92) contrast(1.03);
+  }
+  .hero-photo-bleed::after {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(30,16,9,.05) 0%, rgba(30,16,9,.55) 100%);
+  }
+  .hero-content { position: relative; z-index: 2; max-width: 620px; }
+  .badge-ok {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(227,197,103,.14); border: 1px solid rgba(227,197,103,.4);
+    color: var(--gold-light);
+    font-size: 13px; font-weight: 700; letter-spacing: .03em;
+    padding: 9px 18px 9px 14px; border-radius: 30px; margin-bottom: 26px;
+  }
+  .kicker {
+    font-size: 15px; font-weight: 600; color: var(--coral);
+    text-transform: uppercase; letter-spacing: .06em; margin: 0 0 12px;
+  }
+  h1 {
+    font-size: 52px; line-height: 1.1; font-weight: 800; margin: 0 0 24px;
+    letter-spacing: -0.015em; color: var(--cream);
+  }
+  h1 .accent { color: var(--gold-light); font-weight: 600; }
+  .hero-sub {
+    font-size: 19px; line-height: 1.6; color: #D9CFC0; margin: 0; max-width: 480px;
+  }
+
+  /* DOBRA 2: oferta, fundo claro premium */
+  .offer {
+    background: linear-gradient(180deg, var(--cream) 0%, #F7EED0 100%);
+    color: var(--ink); padding: 88px 0 96px;
+  }
+  .offer .kicker { color: var(--coral); }
+  .offer-head { max-width: 720px; margin: 0 auto 48px; text-align: center; }
+  .offer h2 {
+    font-size: 38px; line-height: 1.25; font-weight: 800; margin: 0 0 18px; color: var(--cafe);
+  }
+  .offer h2 .accent { color: var(--coral); }
+  .offer-lead { font-size: 18px; line-height: 1.6; color: var(--ink-soft); margin: 0; }
+  .offer-lead strong { color: var(--cafe); }
+
+  .offer-card {
+    background: var(--cafe); color: var(--cream);
+    border-radius: 28px; padding: 48px; max-width: 920px; margin: 0 auto;
+    display: grid; grid-template-columns: .95fr 1.05fr; gap: 48px; align-items: center;
+    box-shadow: 0 30px 60px rgba(30,16,9,.22);
+  }
+  .price-block { text-align: left; }
+  .price-tag {
+    font-size: 13px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase;
+    color: var(--gold-light); margin-bottom: 10px;
+  }
+  .price-old {
+    font-size: 20px; color: #A89A85; text-decoration: line-through; margin-bottom: 2px;
+  }
+  .price-new {
+    font-size: 56px; font-weight: 800; color: var(--cream); line-height: 1;
+    display: flex; align-items: baseline; gap: 6px; margin-bottom: 6px;
+  }
+  .price-new small { font-size: 20px; font-weight: 600; color: var(--gold-light); }
+  .price-period { font-size: 14px; color: #C9BFAF; margin-bottom: 28px; }
+  .cta-buy {
+    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+    background: var(--gold); color: var(--cafe);
+    font-size: 17px; font-weight: 700;
+    padding: 18px 30px; border-radius: 40px; width: 100%;
+    text-decoration: none; border: none; cursor: pointer; font-family: 'Sora', sans-serif;
+    box-shadow: 0 14px 28px rgba(212,168,71,.32);
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .cta-buy:hover { transform: translateY(-2px); box-shadow: 0 18px 34px rgba(212,168,71,.42); color: var(--cafe); }
+
+  .offer-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 16px; }
+  .offer-list li { display: flex; gap: 12px; align-items: flex-start; }
+  .offer-list .check {
+    width: 22px; height: 22px; border-radius: 50%; background: rgba(231,237,77,.16);
+    border: 1.5px solid var(--lime); flex-shrink: 0; display: flex; align-items: center; justify-content: center;
+    margin-top: 2px;
+  }
+  .offer-list p { margin: 0; font-size: 15px; line-height: 1.55; color: #EFEAE0; }
+
+  /* prova social em números */
+  .proof {
+    max-width: 920px; margin: 56px auto 0;
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+    text-align: center;
+  }
+  .proof-item { padding: 24px 16px; }
+  .proof-num {
+    font-family: 'Fraunces', serif; font-style: italic; font-weight: 600;
+    font-size: 34px; color: var(--coral); display: block; margin-bottom: 6px;
+  }
+  .proof-label { font-size: 13px; color: var(--ink-soft); line-height: 1.45; }
+  .proof-divider { border-left: 1px solid rgba(30,16,9,.12); }
+
+  /* DOBRA 3: fechamento, café escuro */
+  .closing {
+    background: var(--cafe-softer); color: var(--cream);
+    padding: 80px 0; text-align: center;
+  }
+  .closing .kicker { color: var(--coral); justify-content: center; display: flex; }
+  .closing h2 {
+    font-size: 30px; line-height: 1.4; font-weight: 700; max-width: 740px; margin: 0 auto 34px;
+    color: var(--cream);
+  }
+  .decline-link {
+    display: inline-block; font-size: 15px; color: #9C9184; text-decoration: underline;
+    text-underline-offset: 3px; transition: color .15s ease;
+  }
+  .decline-link:hover { color: var(--cream); }
+
+  /* whatsapp flutuante */
+  .whats-float {
+    position: fixed; right: 20px; bottom: 20px; z-index: 50;
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--lime); color: var(--cafe);
+    padding: 14px; border-radius: 50%;
+    box-shadow: 0 10px 24px rgba(0,0,0,.25);
+    text-decoration: none;
+  }
+  .whats-float span { display: none; font-weight: 700; font-size: 14px; padding-right: 4px; }
+
+  footer {
+    background: var(--cafe-softer); color: #8A8074; padding: 28px 0 90px; text-align: center;
+    font-size: 13px; line-height: 1.6; border-top: 1px solid rgba(227,197,103,.1);
+  }
+  footer a { color: var(--gold-light); text-decoration: none; font-weight: 600; }
+  footer a:hover { color: var(--cream); }
+
+  @media (max-width: 900px) {
+    .wrap { padding: 0 20px; }
+    .hero { min-height: auto; padding: 0 0 44px; flex-direction: column; align-items: stretch; }
+    .hero-photo-bleed {
+      position: relative; width: 100%; height: 58vh; min-height: 340px;
+      -webkit-mask-image: linear-gradient(180deg, transparent 0%, rgba(0,0,0,.6) 18%, #000 42%);
+      mask-image: linear-gradient(180deg, transparent 0%, rgba(0,0,0,.6) 18%, #000 42%);
+    }
+    .hero-content { max-width: 100%; padding: 0 20px; margin-top: -34px; }
+    .badge-ok { font-size: 12px; padding: 8px 16px 8px 12px; margin-bottom: 18px; }
+    h1 { font-size: 30px; margin-bottom: 18px; }
+    .hero-sub { font-size: 16px; }
+
+    .offer { padding: 56px 0 64px; }
+    .offer-head { margin-bottom: 34px; }
+    .offer h2 { font-size: 26px; }
+    .offer-lead { font-size: 16px; }
+    .offer-card { grid-template-columns: 1fr; gap: 30px; padding: 30px 24px; border-radius: 22px; }
+    .price-new { font-size: 46px; }
+    .proof { grid-template-columns: 1fr; gap: 4px; margin-top: 40px; }
+    .proof-divider { border-left: none; border-top: 1px solid rgba(30,16,9,.12); }
+    .proof-item { padding: 18px 12px; }
+
+    .closing { padding: 56px 0; }
+    .closing h2 { font-size: 22px; }
+  }
+
+  @media (max-width: 400px) {
+    h1 { font-size: 26px; }
+    .price-new { font-size: 40px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">Psicologia em Doses <span>&middot;</span> Comunidade Prime</div>
+
+<!-- DOBRA 1 -->
+<section class="hero">
+  <div class="hero-photo-bleed">
+    <img src="img/nathalia-hero.webp" alt="Nathália Andrade" width="1100" height="1375">
+  </div>
+  <div class="wrap">
+    <div class="hero-content reveal">
+      <div class="badge-ok">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Sua compra do Destrave está confirmada
+      </div>
+      <p class="kicker">Antes de você sair dessa página</p>
+      <h1>Tem uma coisa que eu <em class="accent">preciso te mostrar</em>.</h1>
+      <p class="hero-sub">O Destrave arruma o seu perfil e o seu conteúdo. O próximo passo é sustentar isso com constância, sem fazer sozinha.</p>
+    </div>
+  </div>
+</section>
+
+<!-- DOBRA 2: oferta -->
+<section class="offer">
+  <div class="wrap">
+    <div class="offer-head reveal">
+      <p class="kicker">Comunidade Prime</p>
+      <h2>Pra quem já decidiu que vai viver da clínica, <em class="accent">sem depender de indicação</em>.</h2>
+      <p class="offer-lead">Você entra com <strong>desconto exclusivo de quem acabou de comprar o Destrave</strong>: R$997 em vez de R$1.500.</p>
+    </div>
+
+    <div class="offer-card reveal">
+      <div class="price-block">
+        <div class="price-tag">Condição exclusiva</div>
+        <div class="price-old">R$1.500</div>
+        <div class="price-new">R$997 <small>por 12 meses</small></div>
+        <div class="price-period">Acesso à Comunidade Prime por 12 meses inteiros</div>
+        <a class="cta-buy" href="https://pay.hotmart.com/Y105420731T?off=m2w6q7px&checkoutMode=10" data-cta="comprar-comunidade-prime" data-checkout="true">
+          quero entrar na comunidade prime
+        </a>
+      </div>
+
+      <!-- TODO: confirmar com a Nath o texto final desta lista (formato de entrega
+           da Comunidade Prime pós rebrand) antes de escalar tráfego pago pra essa página.
+           Rascunho baseado no registro do ecossistema (ver PROJETO.md / briefing). -->
+      <ul class="offer-list">
+        <li>
+          <div class="check"><svg width="11" height="11" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#E7ED4D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <p>Metodologia estruturada pra atrair pacientes particulares, cobrar melhor e construir uma prática sustentável, com presença digital e conteúdo estratégico no Instagram.</p>
+        </li>
+        <li>
+          <div class="check"><svg width="11" height="11" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#E7ED4D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <p>Acesso pra sustentar o que o Destrave começou: constância e direção, em vez de continuar sozinha.</p>
+        </li>
+        <li>
+          <div class="check"><svg width="11" height="11" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#E7ED4D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <p>Framework pra cobrir as três etapas de quem atrai paciente pelo conteúdo: alcance, conexão e conversão.</p>
+        </li>
+        <li>
+          <div class="check"><svg width="11" height="11" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="#E7ED4D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <p>12 meses de acesso, no ritmo de quem já decidiu que vai viver da clínica.</p>
+        </li>
+      </ul>
+    </div>
+
+    <div class="proof reveal">
+      <div class="proof-item">
+        <span class="proof-num">R$17.000/mês</span>
+        <span class="proof-label">Camila Felitas foi de 26 pra 28 pacientes e chegou lá</span>
+      </div>
+      <div class="proof-item proof-divider">
+        <span class="proof-num">60 &rarr; 5</span>
+        <span class="proof-label">Jaqueline Albuquerque, de 60 pra 5 pacientes, mantendo o faturamento</span>
+      </div>
+      <div class="proof-item proof-divider">
+        <span class="proof-num">3x</span>
+        <span class="proof-label">Vanessa Oliveira triplicou o faturamento em 3 meses</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOBRA 3: fechamento -->
+<section class="closing">
+  <div class="wrap reveal">
+    <p class="kicker">Essa condição é única</p>
+    <h2>Essa condição existe porque você acabou de comprar o Destrave. Ela não aparece de novo depois que você sair dessa página.</h2>
+    <a class="decline-link" href="../boas-vindas-a-vdobg/" data-cta="recusar-oferta">Não, obrigada, quero continuar só com o Destrave por enquanto</a>
+  </div>
+</section>
+
+<a class="whats-float" href="https://wa.me/5561926824361" target="_blank" rel="noopener" aria-label="Falar no WhatsApp" data-cta="whatsapp-flutuante">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M17.6 6.32A8.86 8.86 0 0 0 12.03 4a8.97 8.97 0 0 0-7.77 13.44L3 21l3.66-1.24a8.95 8.95 0 0 0 5.37 1.79h.01c4.94 0 8.96-4.02 8.96-8.96a8.9 8.9 0 0 0-2.34-6.27ZM12.04 20a7.44 7.44 0 0 1-3.8-1.04l-.27-.16-2.83.96.9-2.76-.18-.28a7.45 7.45 0 0 1 6.18-11.6 7.4 7.4 0 0 1 7.4 7.42c0 4.1-3.34 7.46-7.4 7.46Zm4.08-5.57c-.22-.11-1.32-.65-1.53-.73-.2-.08-.35-.11-.5.11-.15.22-.57.73-.7.88-.13.15-.26.16-.48.05-.22-.11-.94-.35-1.79-1.11-.66-.59-1.11-1.32-1.24-1.54-.13-.22-.01-.34.1-.45.1-.1.22-.26.33-.4.11-.13.15-.22.22-.37.07-.15.04-.28-.02-.4-.06-.11-.5-1.22-.69-1.66-.18-.44-.37-.38-.5-.39-.13 0-.28-.01-.43-.01-.15 0-.4.06-.6.28-.2.22-.8.78-.8 1.9 0 1.12.82 2.2.93 2.35.11.15 1.62 2.48 3.93 3.48.55.24.98.38 1.32.48.55.18 1.06.15 1.46.09.45-.07 1.32-.54 1.5-1.06.19-.52.19-.96.13-1.06-.05-.1-.2-.16-.42-.27Z" fill="currentColor"/></svg>
+</a>
+
+<footer>
+  <div class="wrap">
+    Tenho dúvidas antes de comprar. Com quem falo? <a href="https://wa.me/5561926824361" target="_blank" rel="noopener">WhatsApp: +55 61 9268-2436</a>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var els = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window)) {
+      els.forEach(function (el) { el.classList.add('is-visible'); });
+      return;
+    }
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    els.forEach(function (el) { obs.observe(el); });
+  })();
+
+  // begin_checkout dispara no clique, antes do redirecionamento (não espera resposta de nada)
+  document.querySelectorAll('[data-checkout]').forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      var href = btn.getAttribute('href');
+      if (window.dataLayer) {
+        window.dataLayer.push({ event: 'begin_checkout', cta_id: btn.getAttribute('data-cta') });
+      }
+      window.location.href = href;
+    });
+  });
+
+  document.querySelectorAll('[data-cta]:not([data-checkout])').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      if (window.dataLayer) {
+        window.dataLayer.push({ event: 'cta_click', cta_id: btn.getAttribute('data-cta') });
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -44,6 +44,7 @@
     --gold: #D4A847;
     --gold-light: #E3C567;
     --coral: #D9486A;
+    --lime: #E7ED4D;
     --white: #FFFFFF;
   }
   html { overflow-x: clip; }
@@ -109,15 +110,23 @@
   }
   .step-mini .num {
     width: 30px; height: 30px; border-radius: 50%; flex-shrink: 0;
-    background: var(--gold); color: var(--cafe); font-weight: 800; font-size: 14px;
+    background: var(--lime); color: var(--cafe); font-weight: 800; font-size: 14px;
     display: flex; align-items: center; justify-content: center;
   }
   .step-mini p { margin: 0; font-size: 15px; line-height: 1.55; color: var(--ink); }
   .step-mini strong { color: var(--cafe); }
 
+  .hero-photo-wrap { position: relative; }
+  .hero-photo-wrap::before {
+    content: ''; position: absolute; inset: -16px -20px -20px 22px;
+    background: linear-gradient(135deg, var(--lime) 0%, var(--coral) 100%);
+    border-radius: 40px 20px 40px 20px;
+    opacity: .5; z-index: 0;
+  }
   .hero-photo {
-    position: relative; border-radius: 24px; overflow: hidden;
-    box-shadow: 0 24px 48px rgba(30,16,9,.18);
+    position: relative; z-index: 1; overflow: hidden;
+    border-radius: 40px 20px 40px 20px;
+    box-shadow: 0 14px 28px rgba(30,16,9,.14);
   }
   .hero-photo img { width: 100%; height: 100%; object-fit: cover; display: block; aspect-ratio: 3/4; }
   .hero-photo .photo-scrim {
@@ -190,7 +199,7 @@
   }
   .turn h2 .accent { color: var(--coral); }
   .turn-divider {
-    width: 64px; height: 3px; background: var(--gold); margin: 28px auto 0; border-radius: 2px;
+    width: 64px; height: 3px; background: var(--lime); margin: 28px auto 0; border-radius: 2px;
   }
 
   /* rodapé / suporte */
@@ -207,13 +216,36 @@
   footer .brand { margin-top: 24px; font-size: 12px; color: #8A8074; }
 
   @media (max-width: 860px) {
-    .hero-grid { grid-template-columns: 1fr; gap: 32px; }
-    .hero-photo { order: -1; max-width: 340px; margin: 0 auto; }
-    h1 { font-size: 32px; }
-    .action-grid { grid-template-columns: 1fr; gap: 32px; }
-    .action h2 { font-size: 26px; }
-    .turn h2 { font-size: 24px; }
     .wrap { padding: 0 20px; }
+    .hero { padding: 40px 0 40px; }
+    .hero-grid { grid-template-columns: 1fr; gap: 28px; }
+    .hero-photo-wrap { order: -1; max-width: 300px; margin: 0 auto 6px; }
+    .hero-photo-wrap::before { inset: -12px -14px -14px 16px; }
+    .badge-ok { font-size: 12px; padding: 8px 16px 8px 12px; margin-bottom: 18px; }
+    .kicker { font-size: 13px; }
+    h1 { font-size: 28px; }
+    .hero-sub { font-size: 16px; margin-bottom: 22px; }
+    .step-mini { padding: 14px 16px; }
+    .step-mini p { font-size: 14px; }
+
+    .action { padding: 52px 0; }
+    .action-grid { grid-template-columns: 1fr; gap: 30px; }
+    .action h2 { font-size: 24px; }
+    .action p.lead { font-size: 15px; margin-bottom: 24px; }
+    .whats-btn { width: 100%; justify-content: center; padding: 15px 24px; }
+    .action-card { padding: 26px 22px; }
+
+    .turn { padding: 56px 0; }
+    .turn h2 { font-size: 22px; }
+
+    footer { padding: 32px 0 26px; }
+  }
+
+  @media (max-width: 400px) {
+    h1 { font-size: 25px; }
+    .action h2 { font-size: 22px; }
+    .turn h2 { font-size: 20px; }
+    .hero-photo-wrap { max-width: 260px; }
   }
 </style>
 </head>
@@ -245,12 +277,14 @@
       </div>
     </div>
 
-    <div class="hero-photo reveal">
-      <img src="img/nathalia.webp" alt="Nathália Andrade, psicóloga e criadora do Destrave" width="900" height="1350">
-      <div class="photo-scrim"></div>
-      <div class="photo-caption">
-        <strong>Nathália Andrade</strong>
-        Seja bem-vinda ao Destrave.
+    <div class="hero-photo-wrap reveal">
+      <div class="hero-photo">
+        <img src="img/nathalia.webp" alt="Nathália Andrade, psicóloga e criadora do Destrave" width="900" height="1350">
+        <div class="photo-scrim"></div>
+        <div class="photo-caption">
+          <strong>Nathália Andrade</strong>
+          Seja bem-vinda ao Destrave.
+        </div>
       </div>
     </div>
   </div>

@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Acesso liberado: seja bem-vinda ao Destrave</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Fraunces:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
+
+<!-- Google Tag Manager
+     TODO (PROJETO.md): trocar GTM-XXXXXXX pelo container real do projeto. -->
+<script>
+(function (w, d, s, l, i) {
+  w[l] = w[l] || [];
+  w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+  var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+  j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+  f.parentNode.insertBefore(j, f);
+})(window, document, 'script', 'dataLayer', 'GTM-XXXXXXX');
+</script>
+<!-- End Google Tag Manager -->
+
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "yp3175pi2j");
+</script>
+<!-- End Microsoft Clarity -->
+
+<style>
+  :root {
+    --cream: #FDF6E3;
+    --cream-card: #FFFDF6;
+    --ink: #15140E;
+    --ink-soft: #4A4A40;
+    --cafe: #1E1009;
+    --cafe-soft: #3B2112;
+    --gold: #D4A847;
+    --gold-light: #E3C567;
+    --coral: #D9486A;
+    --white: #FFFFFF;
+  }
+  html { overflow-x: clip; }
+  body {
+    margin: 0; font-family: 'Sora', sans-serif; background-color: var(--cream);
+    color: var(--ink);
+  }
+  * { box-sizing: border-box; }
+  a { color: inherit; }
+  em, .accent {
+    font-family: 'Fraunces', serif; font-style: italic; font-weight: 600;
+  }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+  .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
+  .reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+  /* topo com selo de marca */
+  .topbar {
+    background: var(--cafe); color: var(--cream);
+    padding: 14px 0; text-align: center;
+    font-size: 13px; letter-spacing: .06em; text-transform: uppercase;
+    font-weight: 600;
+  }
+  .topbar span { color: var(--gold-light); }
+
+  /* HERO / DOBRA 1 */
+  .hero {
+    background: linear-gradient(180deg, var(--cream) 0%, var(--cream) 60%, #F7EED0 100%);
+    padding: 56px 0 48px;
+    border-bottom: 1px solid rgba(30,16,9,.08);
+  }
+  .hero-grid {
+    display: grid; grid-template-columns: 1.1fr .9fr; gap: 48px; align-items: center;
+  }
+  .badge-ok {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--cafe); color: var(--gold-light);
+    font-size: 13px; font-weight: 700; letter-spacing: .03em;
+    padding: 9px 18px 9px 14px; border-radius: 30px;
+    margin-bottom: 22px;
+  }
+  .badge-ok svg { flex-shrink: 0; }
+  .kicker {
+    font-size: 15px; font-weight: 600; color: var(--coral);
+    text-transform: uppercase; letter-spacing: .06em; margin: 0 0 10px;
+  }
+  h1 {
+    font-size: 44px; line-height: 1.12; font-weight: 800; margin: 0 0 20px;
+    letter-spacing: -0.01em;
+  }
+  h1 .accent { color: var(--coral); font-weight: 600; }
+  .hero-sub {
+    font-size: 18px; line-height: 1.6; color: var(--ink-soft); margin: 0 0 28px;
+    max-width: 520px;
+  }
+  .steps-mini {
+    display: flex; flex-direction: column; gap: 14px;
+  }
+  .step-mini {
+    display: flex; gap: 14px; align-items: flex-start;
+    background: var(--cream-card); border: 1px solid rgba(30,16,9,.1);
+    border-radius: 16px; padding: 16px 18px;
+  }
+  .step-mini .num {
+    width: 30px; height: 30px; border-radius: 50%; flex-shrink: 0;
+    background: var(--gold); color: var(--cafe); font-weight: 800; font-size: 14px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .step-mini p { margin: 0; font-size: 15px; line-height: 1.55; color: var(--ink); }
+  .step-mini strong { color: var(--cafe); }
+
+  .hero-photo {
+    position: relative; border-radius: 24px; overflow: hidden;
+    box-shadow: 0 24px 48px rgba(30,16,9,.18);
+  }
+  .hero-photo img { width: 100%; height: 100%; object-fit: cover; display: block; aspect-ratio: 3/4; }
+  .hero-photo .photo-scrim {
+    position: absolute; inset: auto 0 0 0; height: 45%;
+    background: linear-gradient(180deg, rgba(30,16,9,0) 0%, rgba(30,16,9,.72) 100%);
+  }
+  .hero-photo .photo-caption {
+    position: absolute; left: 20px; right: 20px; bottom: 18px;
+    color: var(--cream); font-size: 14px; line-height: 1.4;
+  }
+  .hero-photo .photo-caption strong { color: var(--gold-light); display: block; font-size: 15px; margin-bottom: 2px; }
+
+  /* DOBRA 2 - primeira ação, fundo café */
+  .action {
+    background: var(--cafe); color: var(--cream);
+    padding: 72px 0;
+  }
+  .action-grid {
+    display: grid; grid-template-columns: .85fr 1.15fr; gap: 56px; align-items: center;
+  }
+  .action .kicker { color: var(--gold-light); }
+  .action h2 {
+    font-size: 34px; line-height: 1.2; font-weight: 800; margin: 0 0 18px; color: var(--cream);
+  }
+  .action h2 .accent { color: var(--gold-light); }
+  .action p.lead {
+    font-size: 17px; line-height: 1.65; color: #D9CFC0; margin: 0 0 30px; max-width: 480px;
+  }
+  .whats-btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: var(--gold); color: var(--cafe);
+    font-size: 16px; font-weight: 700;
+    padding: 16px 28px; border-radius: 40px;
+    text-decoration: none;
+    box-shadow: 0 10px 24px rgba(212,168,71,.35);
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .whats-btn:hover { transform: translateY(-2px); box-shadow: 0 14px 30px rgba(212,168,71,.45); color: var(--cafe); }
+  .whats-btn svg { flex-shrink: 0; }
+
+  .action-card {
+    background: var(--cafe-soft); border: 1px solid rgba(227,197,103,.25);
+    border-radius: 22px; padding: 36px 32px;
+  }
+  .ring-badge {
+    width: 56px; height: 56px; border-radius: 50%;
+    border: 2px solid var(--gold); display: flex; align-items: center; justify-content: center;
+    margin-bottom: 20px; flex-shrink: 0;
+  }
+  .action-card ol { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 18px; }
+  .action-card li { display: flex; gap: 14px; align-items: flex-start; }
+  .action-card .ring-num {
+    width: 34px; height: 34px; border-radius: 50%; border: 2px solid var(--gold);
+    color: var(--gold-light); font-weight: 700; font-size: 14px;
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  }
+  .action-card li p { margin: 0; font-size: 15px; line-height: 1.55; color: #EFEAE0; }
+  .action-card li strong { color: var(--gold-light); }
+
+  /* DOBRA 3 - virada, fundo claro com foto */
+  .turn {
+    background: linear-gradient(180deg, #F7EED0 0%, var(--cream) 100%);
+    padding: 76px 0;
+    text-align: center;
+  }
+  .turn .kicker { color: var(--coral); }
+  .turn h2 {
+    font-size: 32px; line-height: 1.35; font-weight: 700; max-width: 780px; margin: 0 auto;
+    color: var(--cafe);
+  }
+  .turn h2 .accent { color: var(--coral); }
+  .turn-divider {
+    width: 64px; height: 3px; background: var(--gold); margin: 28px auto 0; border-radius: 2px;
+  }
+
+  /* rodapé / suporte */
+  footer {
+    background: var(--cafe); color: #C9BFAF; padding: 40px 0 32px; text-align: center;
+    font-size: 14px; line-height: 1.6;
+  }
+  footer strong { color: var(--gold-light); }
+  footer a.support-link {
+    display: inline-flex; align-items: center; gap: 8px; margin-top: 14px;
+    color: var(--gold-light); text-decoration: none; font-weight: 700; font-size: 15px;
+  }
+  footer a.support-link:hover { color: var(--white); }
+  footer .brand { margin-top: 24px; font-size: 12px; color: #8A8074; }
+
+  @media (max-width: 860px) {
+    .hero-grid { grid-template-columns: 1fr; gap: 32px; }
+    .hero-photo { order: -1; max-width: 340px; margin: 0 auto; }
+    h1 { font-size: 32px; }
+    .action-grid { grid-template-columns: 1fr; gap: 32px; }
+    .action h2 { font-size: 26px; }
+    .turn h2 { font-size: 24px; }
+    .wrap { padding: 0 20px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">Psicologia em Doses <span>&middot;</span> Destrave</div>
+
+<!-- DOBRA 1: confirmação -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="badge-ok">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Compra confirmada
+      </div>
+      <p class="kicker">Acesso liberado</p>
+      <h1>Chega no seu e-mail e no WhatsApp em <em class="accent">até 5 minutos</em>.</h1>
+      <p class="hero-sub">Abra o e-mail agora e confirme que os dois links chegaram (curso e comunidade, se for o caso).</p>
+
+      <div class="steps-mini reveal">
+        <div class="step-mini">
+          <div class="num">1</div>
+          <p><strong>Abra sua caixa de entrada agora</strong> e procure pelo e-mail com seus acessos.</p>
+        </div>
+        <div class="step-mini">
+          <div class="num">2</div>
+          <p>Se não achar, olha nas <strong>promoções ou no spam</strong> antes de me chamar.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-photo reveal">
+      <img src="img/nathalia.webp" alt="Nathália Andrade, psicóloga e criadora do Destrave" width="900" height="1350">
+      <div class="photo-scrim"></div>
+      <div class="photo-caption">
+        <strong>Nathália Andrade</strong>
+        Seja bem-vinda ao Destrave.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOBRA 2: primeira ação -->
+<section class="action">
+  <div class="wrap action-grid">
+    <div class="reveal">
+      <p class="kicker">Primeira ação</p>
+      <h2>Reserve 20 minutos hoje à noite e faça a <em class="accent">auditoria do perfil</em>.</h2>
+      <p class="lead">É o primeiro módulo, é rápido e já te mostra o que priorizar essa semana.</p>
+      <a class="whats-btn" href="https://wa.me/5561926824361" target="_blank" rel="noopener" data-cta="whatsapp-suporte">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M17.6 6.32A8.86 8.86 0 0 0 12.03 4a8.97 8.97 0 0 0-7.77 13.44L3 21l3.66-1.24a8.95 8.95 0 0 0 5.37 1.79h.01c4.94 0 8.96-4.02 8.96-8.96a8.9 8.9 0 0 0-2.34-6.27ZM12.04 20a7.44 7.44 0 0 1-3.8-1.04l-.27-.16-2.83.96.9-2.76-.18-.28a7.45 7.45 0 0 1 6.18-11.6 7.4 7.4 0 0 1 7.4 7.42c0 4.1-3.34 7.46-7.4 7.46Zm4.08-5.57c-.22-.11-1.32-.65-1.53-.73-.2-.08-.35-.11-.5.11-.15.22-.57.73-.7.88-.13.15-.26.16-.48.05-.22-.11-.94-.35-1.79-1.11-.66-.59-1.11-1.32-1.24-1.54-.13-.22-.01-.34.1-.45.1-.1.22-.26.33-.4.11-.13.15-.22.22-.37.07-.15.04-.28-.02-.4-.06-.11-.5-1.22-.69-1.66-.18-.44-.37-.38-.5-.39-.13 0-.28-.01-.43-.01-.15 0-.4.06-.6.28-.2.22-.8.78-.8 1.9 0 1.12.82 2.2.93 2.35.11.15 1.62 2.48 3.93 3.48.55.24.98.38 1.32.48.55.18 1.06.15 1.46.09.45-.07 1.32-.54 1.5-1.06.19-.52.19-.96.13-1.06-.05-.1-.2-.16-.42-.27Z" fill="currentColor"/></svg>
+        Suporte: +55 61 9268-2436
+      </a>
+    </div>
+
+    <div class="action-card reveal">
+      <div class="ring-badge">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4-4.8-2.5-4.8 2.5.9-5.4-3.9-3.8 5.4-.8L12 2z" stroke="#D4A847" stroke-width="1.4" stroke-linejoin="round"/></svg>
+      </div>
+      <ol>
+        <li>
+          <div class="ring-num">1</div>
+          <p><strong>Entre na plataforma</strong> com o acesso que chegou no seu e-mail.</p>
+        </li>
+        <li>
+          <div class="ring-num">2</div>
+          <p><strong>Vá direto no primeiro módulo</strong>: auditoria do perfil.</p>
+        </li>
+        <li>
+          <div class="ring-num">3</div>
+          <p><strong>Anote o que priorizar</strong> essa semana. É o ponto de partida de tudo.</p>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- DOBRA 3: a virada -->
+<section class="turn">
+  <div class="wrap reveal">
+    <p class="kicker">Essa é a virada</p>
+    <h2>Você já pagou os cursos, já fez as formações. O que faltava era <em class="accent">alguém organizar isso num caminho</em> pro consultório encher. Agora esse caminho está com você.</h2>
+    <div class="turn-divider"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div><strong>Psicologia em Doses</strong> &middot; Nathália Andrade</div>
+    <div>Qualquer dúvida no acesso, chama no WhatsApp de suporte.</div>
+    <a class="support-link" href="https://wa.me/5561926824361" target="_blank" rel="noopener" data-cta="whatsapp-rodape">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M17.6 6.32A8.86 8.86 0 0 0 12.03 4a8.97 8.97 0 0 0-7.77 13.44L3 21l3.66-1.24a8.95 8.95 0 0 0 5.37 1.79h.01c4.94 0 8.96-4.02 8.96-8.96a8.9 8.9 0 0 0-2.34-6.27ZM12.04 20a7.44 7.44 0 0 1-3.8-1.04l-.27-.16-2.83.96.9-2.76-.18-.28a7.45 7.45 0 0 1 6.18-11.6 7.4 7.4 0 0 1 7.4 7.42c0 4.1-3.34 7.46-7.4 7.46Zm4.08-5.57c-.22-.11-1.32-.65-1.53-.73-.2-.08-.35-.11-.5.11-.15.22-.57.73-.7.88-.13.15-.26.16-.48.05-.22-.11-.94-.35-1.79-1.11-.66-.59-1.11-1.32-1.24-1.54-.13-.22-.01-.34.1-.45.1-.1.22-.26.33-.4.11-.13.15-.22.22-.37.07-.15.04-.28-.02-.4-.06-.11-.5-1.22-.69-1.66-.18-.44-.37-.38-.5-.39-.13 0-.28-.01-.43-.01-.15 0-.4.06-.6.28-.2.22-.8.78-.8 1.9 0 1.12.82 2.2.93 2.35.11.15 1.62 2.48 3.93 3.48.55.24.98.38 1.32.48.55.18 1.06.15 1.46.09.45-.07 1.32-.54 1.5-1.06.19-.52.19-.96.13-1.06-.05-.1-.2-.16-.42-.27Z" fill="currentColor"/></svg>
+      +55 61 9268-2436
+    </a>
+    <div class="brand">Destrave &middot; Psicologia em Doses</div>
+  </div>
+</footer>
+
+<script>
+  // Reveal on scroll
+  (function () {
+    var els = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window)) {
+      els.forEach(function (el) { el.classList.add('is-visible'); });
+      return;
+    }
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    els.forEach(function (el) { obs.observe(el); });
+  })();
+
+  // page_view padrão (já disparado pelo GTM na trigger "All Pages"); nenhum evento
+  // de conversão aqui, pois o begin_checkout já disparou na página de venda.
+  document.querySelectorAll('[data-cta]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      if (window.dataLayer) {
+        window.dataLayer.push({ event: 'cta_click', cta_id: btn.getAttribute('data-cta') });
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

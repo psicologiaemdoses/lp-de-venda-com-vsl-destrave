@@ -20,10 +20,11 @@ A skill lê este arquivo antes de todo trabalho. Preencha uma vez e mantenha em 
 
 - **Repositório (git):** psicologiaemdoses/lp-de-venda-com-vsl-destrave
 - **Tipo de site:** HTML estático
-- **Projeto na Vercel:** `lp-01.lp.vd.fped-003.lp-de-venda-direta-a-vsl` — **ainda não conectado a este repositório** (pendente, ver conversa)
-- **Domínio(s) de produção:** pendente
-- **Fluxo de git:** branch por página → preview da Vercel → aprovação no preview → merge na `main` = no ar
-- **Preview protegido?** pendente confirmar (padrão da Vercel é pedir login no preview)
+- **Onde publica de fato:** hospedagem principal (Hostinger, WordPress) de `psicologiaemdoses.com.br`, via auto-deploy do Git conectado no hPanel. O diretório de destino do auto-deploy é `fped-003` (a raiz do repo vira o conteúdo de `fped-003/`), então cada página vira uma subpasta do repo: `destrave-a/index.html` → `fped-003/destrave-a/`, `boas-vindas-a-vdobg/index.html` → `fped-003/boas-vindas-a-vdobg/`.
+- **Vercel:** projeto `lp-01.lp.vd.fped-003.lp-de-venda-direta-a-vsl` existe e fica conectado ao mesmo repositório (preview de branch antes de aprovar), mas a produção real é servida pela Hostinger, não pela Vercel.
+- **Domínio(s) de produção:** `psicologiaemdoses.com.br` (site principal em WordPress, hospedagem Hostinger)
+- **Fluxo de git:** branch por página → preview (Vercel ou revisão local) → aprovação → merge na `main` → auto-deploy da Hostinger publica em minutos
+- **Preview protegido?** não se aplica pro fluxo atual (produção sai direto na Hostinger, não por link de preview da Vercel)
 
 ## Medição
 
@@ -62,4 +63,5 @@ A skill lê este arquivo antes de todo trabalho. Preencha uma vez e mantenha em 
 
 | URL de produção | Objetivo | Evento de conversão | Última verificação | Resultado |
 |---|---|---|---|---|
-| (ainda não publicada) | Venda direta do Destrave (VSL) | `begin_checkout` | — | — |
+| `psicologiaemdoses.com.br/fped-003/destrave-a` | Venda direta do Destrave (VSL) | `begin_checkout` | 2026-09-27 | publicada, GTM ainda com id placeholder |
+| `psicologiaemdoses.com.br/fped-003/boas-vindas-a-vdobg` | Página de obrigado pós-compra do Destrave (confirmação + primeira ação, sem formulário) | não se aplica — conversão já disparou no checkout; aqui só `page_view` padrão | 2026-09-27 | publicada, GTM ainda com id placeholder |

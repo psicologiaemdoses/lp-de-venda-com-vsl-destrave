@@ -39,7 +39,7 @@ A skill lê este arquivo antes de todo trabalho. Preencha uma vez e mantenha em 
 
 ## Checkout
 
-- **Link de checkout:** pendente — o botão da oferta (`#oferta`) e o botão de fechamento estão com `CHECKOUT_URL = null` no `index.html`; enquanto isso, o clique só rola a página até a oferta em vez de navegar pra lugar nenhum.
+- **Link de checkout:** Hotmart, `https://pay.hotmart.com/I107780246C?off=mz614nlu&checkoutMode=10` — configurado no `index.html` (`CHECKOUT_URL` e nos dois botões de oferta/fechamento).
 - **Onde a VSL está hospedada:** VTurb. O player fica embutido no bloco `#vturb-video` do `index.html`; falta colar o embed real exportado do VTurb.
 - **Botão de oferta dentro do vídeo:** é o próprio VTurb que exibe o botão no momento certo do vídeo (configurado lá). Por isso a barra fixa de preço + botão que aparecia desde a entrada da página foi removida do `index.html` — ela fazia o preço aparecer antes da hora.
 

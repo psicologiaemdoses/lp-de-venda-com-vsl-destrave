@@ -168,8 +168,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <div style="font-family: 'Sora', sans-serif; font-weight: 800; font-size: 42px; color: var(--white); line-height: 1;">R$297</div>
         <div style="font-size: 12.5px; color: var(--cream); opacity: .65;">à vista, ou 12x de R$29,82</div>
-        <!-- TODO (PROJETO.md): trocar pelo link real de checkout. -->
-        <a href="#checkout-pendente" class="cta" data-cta="oferta" data-checkout style="margin-top: 6px;">Quero entrar no destrave →</a>
+        <a href="https://pay.hotmart.com/I107780246C?off=mz614nlu&checkoutMode=10" class="cta" data-cta="oferta" data-checkout style="margin-top: 6px;">Quero entrar no destrave →</a>
       </div>
 
     </div>
@@ -250,8 +249,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <div style="text-align: center; display: flex; flex-direction: column; gap: 18px; align-items: center;">
         <p style="margin: 0; font-size: 15px; line-height: 1.8; color: var(--ink); font-weight: 600; max-width: 460px;">Você já estudou, já se formou, já fez supervisão. Faltou alguém te contar que o seu perfil estava afastando as pessoas antes delas te ouvirem.</p>
-        <!-- TODO (PROJETO.md): trocar pelo link real de checkout. -->
-        <a href="#checkout-pendente" class="cta" data-cta="fechamento" data-checkout>Quero destravar minha captação →</a>
+        <a href="https://pay.hotmart.com/I107780246C?off=mz614nlu&checkoutMode=10" class="cta" data-cta="fechamento" data-checkout>Quero destravar minha captação →</a>
       </div>
     </div>
   </div>
@@ -293,8 +291,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('is-visible'); });
   }
 
-  // Placeholder de link de checkout, até o PROJETO.md trazer o definitivo.
-  var CHECKOUT_URL = null; // TODO: ex. 'https://pay.exemplo.com/destrave'
+  var CHECKOUT_URL = 'https://pay.hotmart.com/I107780246C?off=mz614nlu&checkoutMode=10';
 
   document.querySelectorAll('[data-cta]').forEach(function (el) {
     el.addEventListener('click', function (e) {

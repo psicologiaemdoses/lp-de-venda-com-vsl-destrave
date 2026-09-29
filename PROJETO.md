@@ -28,7 +28,7 @@ A skill lê este arquivo antes de todo trabalho. Preencha uma vez e mantenha em 
 
 ## Medição
 
-- **Container do GTM** (`GTM-XXXXXXX`) e quem pode publicar: pendente — o código já está com o snippet do GTM instalado, mas com `GTM-XXXXXXX` de placeholder até o id real chegar
+- **Container do GTM:** `GTM-W4N7VFD9` — instalado em `destrave-a/index.html` (script no `<head>` + `<noscript>` logo após `<body>`). Quem pode publicar: pendente. Ainda falta instalar em `boas-vindas-a-vdobg` e `oportunidade-a`.
 - **Projeto do Clarity** (id) e conta dona: `yp3175pi2j` — instalado no `index.html`, conta dona pendente de confirmação
 - **Banner de consentimento (LGPD)?** pendente
 - **Evento de conversão padrão:** `begin_checkout` (página de venda direta, sem formulário — o clique no CTA da oferta manda direto pro checkout)
@@ -65,6 +65,6 @@ A skill lê este arquivo antes de todo trabalho. Preencha uma vez e mantenha em 
 
 | URL de produção | Objetivo | Evento de conversão | Última verificação | Resultado |
 |---|---|---|---|---|
-| `psicologiaemdoses.com.br/fped-003/destrave-a` | Venda direta do Destrave (VSL) | `begin_checkout` | 2026-09-27 | publicada, GTM ainda com id placeholder |
+| `psicologiaemdoses.com.br/fped-003/destrave-a` | Venda direta do Destrave (VSL) | `begin_checkout` | 2026-09-29 | publicada, GTM com container real (`GTM-W4N7VFD9`) |
 | `psicologiaemdoses.com.br/fped-003/boas-vindas-a-vdobg` | Página de obrigado pós-compra do Destrave (confirmação + primeira ação, sem formulário) | não se aplica — conversão já disparou no checkout; aqui só `page_view` padrão | 2026-09-27 | publicada, GTM ainda com id placeholder |
 | `psicologiaemdoses.com.br/fped-003/oportunidade-a` | OTO pós-checkout do Destrave: upsell direto pra Comunidade Prime (R$997 de R$1.500, 12 meses), 1 botão só | `begin_checkout` no clique do botão de compra, antes do redirecionamento pro checkout Hotmart | 2026-09-27 | publicada, GTM com id placeholder e lista de entrega da Comunidade Prime pendente de confirmação com a Nathália |

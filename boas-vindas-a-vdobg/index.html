@@ -87,6 +87,8 @@
     margin-bottom: 22px;
   }
   .badge-ok svg { flex-shrink: 0; }
+  .id-row { display: contents; }
+  .hero-avatar { display: none; }
   .kicker {
     font-size: 15px; font-weight: 600; color: var(--coral);
     text-transform: uppercase; letter-spacing: .06em; margin: 0 0 10px;
@@ -202,6 +204,16 @@
     width: 64px; height: 3px; background: var(--lime); margin: 28px auto 0; border-radius: 2px;
   }
 
+  /* whatsapp flutuante fixo (acompanha a rolagem, canto inferior direito) */
+  .whats-float {
+    position: fixed; right: 20px; bottom: 20px; z-index: 50;
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--lime); color: var(--cafe);
+    padding: 14px; border-radius: 50%;
+    box-shadow: 0 10px 24px rgba(0,0,0,.25);
+    text-decoration: none;
+  }
+
   /* rodapé / suporte */
   footer {
     background: var(--cafe); color: #C9BFAF; padding: 40px 0 32px; text-align: center;
@@ -214,14 +226,30 @@
   }
   footer a.support-link:hover { color: var(--white); }
   footer .brand { margin-top: 24px; font-size: 12px; color: #8A8074; }
+  footer .legal { margin-top: 10px; font-size: 11.5px; color: #7A7166; }
 
   @media (max-width: 860px) {
     .wrap { padding: 0 20px; }
-    .hero { padding: 40px 0 40px; }
-    .hero-grid { grid-template-columns: 1fr; gap: 28px; }
-    .hero-photo-wrap { order: -1; max-width: 300px; margin: 0 auto 6px; }
-    .hero-photo-wrap::before { inset: -12px -14px -14px 16px; }
-    .badge-ok { font-size: 12px; padding: 8px 16px 8px 12px; margin-bottom: 18px; }
+    .hero { position: relative; overflow: hidden; padding: 32px 0 36px; }
+    /* foto vira marca d'água desfocada no canto, o texto some primeiro na tela */
+    .hero::before {
+      content: ''; position: absolute; top: -10%; right: -22%; width: 78%; height: 52%;
+      background-image: url('img/nathalia.webp'); background-size: cover; background-position: 30% 12%;
+      filter: blur(5px) saturate(.85); opacity: .3; border-radius: 46%; z-index: 0;
+    }
+    .hero::after {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(165deg, rgba(253,246,227,.4) 0%, var(--cream) 52%, var(--cream) 100%);
+      z-index: 0;
+    }
+    .hero-grid { position: relative; z-index: 1; grid-template-columns: 1fr; gap: 28px; }
+    .hero-photo-wrap { display: none; }
+    .id-row { display: flex; align-items: center; gap: 10px; margin-bottom: 18px; }
+    .hero-avatar {
+      display: block; width: 44px; height: 44px; border-radius: 50%; object-fit: cover;
+      border: 2px solid var(--gold-light); box-shadow: 0 4px 10px rgba(30,16,9,.18); flex-shrink: 0;
+    }
+    .badge-ok { font-size: 12px; padding: 8px 16px 8px 12px; margin-bottom: 0; }
     .kicker { font-size: 13px; }
     h1 { font-size: 28px; }
     .hero-sub { font-size: 16px; margin-bottom: 22px; }
@@ -245,7 +273,6 @@
     h1 { font-size: 25px; }
     .action h2 { font-size: 22px; }
     .turn h2 { font-size: 20px; }
-    .hero-photo-wrap { max-width: 260px; }
   }
 </style>
 </head>
@@ -257,9 +284,12 @@
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <div class="badge-ok">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        Compra confirmada
+      <div class="id-row">
+        <img class="hero-avatar" src="img/nathalia.webp" alt="Nathália Andrade">
+        <div class="badge-ok">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Compra confirmada
+        </div>
       </div>
       <p class="kicker">Acesso liberado</p>
       <h1>Chega no seu e-mail e no WhatsApp em <em class="accent">até 5 minutos</em>.</h1>
@@ -343,8 +373,13 @@
       +55 61 9268-2436
     </a>
     <div class="brand">Destrave &middot; Psicologia em Doses</div>
+    <div class="legal">CNPJ 57.240.157/0001-01, Florianópolis, SC, CEP 88.032-005</div>
   </div>
 </footer>
+
+<a class="whats-float" href="https://wa.me/556192682436" target="_blank" rel="noopener" aria-label="Falar no WhatsApp" data-cta="whatsapp-flutuante">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M17.6 6.32A8.86 8.86 0 0 0 12.03 4a8.97 8.97 0 0 0-7.77 13.44L3 21l3.66-1.24a8.95 8.95 0 0 0 5.37 1.79h.01c4.94 0 8.96-4.02 8.96-8.96a8.9 8.9 0 0 0-2.34-6.27ZM12.04 20a7.44 7.44 0 0 1-3.8-1.04l-.27-.16-2.83.96.9-2.76-.18-.28a7.45 7.45 0 0 1 6.18-11.6 7.4 7.4 0 0 1 7.4 7.42c0 4.1-3.34 7.46-7.4 7.46Zm4.08-5.57c-.22-.11-1.32-.65-1.53-.73-.2-.08-.35-.11-.5.11-.15.22-.57.73-.7.88-.13.15-.26.16-.48.05-.22-.11-.94-.35-1.79-1.11-.66-.59-1.11-1.32-1.24-1.54-.13-.22-.01-.34.1-.45.1-.1.22-.26.33-.4.11-.13.15-.22.22-.37.07-.15.04-.28-.02-.4-.06-.11-.5-1.22-.69-1.66-.18-.44-.37-.38-.5-.39-.13 0-.28-.01-.43-.01-.15 0-.4.06-.6.28-.2.22-.8.78-.8 1.9 0 1.12.82 2.2.93 2.35.11.15 1.62 2.48 3.93 3.48.55.24.98.38 1.32.48.55.18 1.06.15 1.46.09.45-.07 1.32-.54 1.5-1.06.19-.52.19-.96.13-1.06-.05-.1-.2-.16-.42-.27Z" fill="currentColor"/></svg>
+</a>
 
 <script>
   // Reveal on scroll

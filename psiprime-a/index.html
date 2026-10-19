@@ -245,7 +245,7 @@ if (CONFIG.GTM_ID) {
         <div><b data-u="m">00</b><span>min</span></div>
         <div><b data-u="s">00</b><span>seg</span></div>
       </div>
-      <a class="btn" href="#ingresso" data-cta="hero">Quero garantir minha vaga <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn" href="https://pay.hotmart.com/Y108097135Q?off=svqxnk85&checkoutMode=10" data-cta="hero">Quero garantir minha vaga <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       <p class="fine">Garantia de 7 dias. Pagamento seguro.</p>
     </div>
   </div>
@@ -270,7 +270,7 @@ if (CONFIG.GTM_ID) {
       <li>Sente que a sua agenda poderia estar mais cheia, com os pacientes certos.</li>
     </ul>
     <p class="lead">Se você marcou alguma, esse sábado foi pensado para você.</p>
-    <a class="btn" href="#ingresso" data-cta="dores">Quero garantir minha vaga <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <a class="btn" href="https://pay.hotmart.com/Y108097135Q?off=svqxnk85&checkoutMode=10" data-cta="dores">Quero garantir minha vaga <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
   </div>
 </section>
 
@@ -364,7 +364,7 @@ if (CONFIG.GTM_ID) {
         </form>
       </article>
     </div>
-    <div class="stack center"><a class="btn" href="#ingresso" data-cta="blocos">Quero garantir minha vaga <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+    <div class="stack center"><a class="btn" href="https://pay.hotmart.com/Y108097135Q?off=svqxnk85&checkoutMode=10" data-cta="blocos">Quero garantir minha vaga <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
   </div>
 </section>
 
@@ -456,7 +456,7 @@ if (CONFIG.GTM_ID) {
         <div><span>Próximo valor</span><span>R$ 39,97</span></div>
         <div><span>Valor final</span><span>R$ 49,97</span></div>
       </div>
-      <a class="btn" href="#" id="checkout" data-cta="ingresso">Quero garantir minha vaga <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn" href="https://pay.hotmart.com/Y108097135Q?off=svqxnk85&checkoutMode=10" id="checkout" data-cta="ingresso">Quero garantir minha vaga <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       <div class="guarantee">
         <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3l11 4v8c0 7-4.6 11.6-11 14C9.6 26.6 5 22 5 15V7z"/><path d="M11 16l3.5 3.5L21 12.5"/></svg>
         <p><b>Garantia de 7 dias.</b> Você pode pedir o reembolso em até 7 dias após a compra, direto pela Hotmart.</p>
@@ -485,7 +485,7 @@ if (CONFIG.GTM_ID) {
   <div class="in narrow stack center">
     <h2>O seu trabalho merece <em>chegar a quem precisa.</em></h2>
     <p class="lead">Tem alguém procurando exatamente o que você sabe fazer. Ela só ainda não te encontrou.</p>
-    <a class="btn" href="#ingresso" data-cta="final">Quero garantir minha vaga <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <a class="btn" href="https://pay.hotmart.com/Y108097135Q?off=svqxnk85&checkoutMode=10" data-cta="final">Quero garantir minha vaga <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     <p class="fine">R$ 29,97 por tempo limitado · Garantia de 7 dias</p>
   </div>
 </section>
@@ -494,7 +494,7 @@ if (CONFIG.GTM_ID) {
 <div class="sticky" id="sticky">
   <div class="row">
     <div class="t" data-needs-deadline hidden>Esse preço muda em<b data-timer>47:59:59</b></div>
-    <a class="btn" href="#ingresso" data-cta="sticky">Quero minha vaga <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <a class="btn" href="https://pay.hotmart.com/Y108097135Q?off=svqxnk85&checkoutMode=10" data-cta="sticky">Quero minha vaga <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
   </div>
 </div>
 
@@ -522,21 +522,24 @@ if (CONFIG.GTM_ID) {
   var st = document.getElementById('sticky'), ing = document.getElementById('ingresso');
   if ('IntersectionObserver' in window) new IntersectionObserver(function(e){ st.hidden = e[0].isIntersecting; }).observe(ing);
 
-  // Eventos para o GTM (a pagina so fala com o dataLayer)
+  // Todos os botoes de compra levam direto ao checkout da Hotmart.
+  // Eventos para o GTM (a pagina so fala com o dataLayer): cta_click e begin_checkout, antes do redirecionamento.
+  var going = false;
   [].forEach.call(document.querySelectorAll('[data-cta]'), function(el){
-    el.addEventListener('click', function(){ window.dataLayer.push({event:'cta_click', cta_id: el.getAttribute('data-cta')}); });
-  });
-
-  // Checkout: leva os parametros da URL (utm_*, fbclid etc.) para a Hotmart
-  var ck = document.getElementById('checkout');
-  ck.addEventListener('click', function(ev){
-    ev.preventDefault();
-    if (!CONFIG.CHECKOUT_URL) return;
-    window.dataLayer.push({event:'begin_checkout', cta_id:'ingresso', currency:'BRL', value:29.97, items:[{item_id:'ingresso-viver-de-terapia', item_name:'Ingresso Viver de Terapia', price:29.97, quantity:1}]});
-    var url = CONFIG.CHECKOUT_URL;
-    var q = window.location.search.replace(/^\?/, '');
-    if (q) url += (url.indexOf('?') > -1 ? '&' : '?') + q;
-    setTimeout(function(){ window.location.href = url; }, 300);
+    el.addEventListener('click', function(ev){
+      ev.preventDefault();
+      if (going) return;
+      var id = el.getAttribute('data-cta');
+      window.dataLayer.push({event:'cta_click', cta_id: id});
+      if (!CONFIG.CHECKOUT_URL) return;
+      going = true;
+      window.dataLayer.push({event:'begin_checkout', cta_id: id, currency:'BRL', value:29.97, items:[{item_id:'ingresso-viver-de-terapia', item_name:'Ingresso Viver de Terapia', price:29.97, quantity:1}]});
+      // leva os parametros da URL (utm_*, fbclid etc.) para a Hotmart
+      var url = CONFIG.CHECKOUT_URL;
+      var q = window.location.search.replace(/^\?/, '');
+      if (q) url += (url.indexOf('?') > -1 ? '&' : '?') + q;
+      setTimeout(function(){ window.location.href = url; }, 300);
+    });
   });
 
   var r = document.getElementById('renda'), s = document.getElementById('sessao'), f = document.getElementById('freq'), o = document.getElementById('calc-out');

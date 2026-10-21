@@ -19,3 +19,4 @@
 - Pagina de obrigado oficial: https://psicologiaemdoses.com.br/cp-Le01/boas-vindas-a-ldobg/ (branch `cp-le01`, pasta `cp-Le01` no servidor).
 - `/mp-Le01/obrigado-a/` agora apenas redireciona para a URL oficial.
 - Link curto da LP: https://psicologiaemdoses.com.br/workshop/ (branch `link-workshop`).
+- LP de vendas oficial: https://psicologiaemdoses.com.br/cp-Le01/inscricao-a/ (branch `cp-le01`). `/mp-Le01/psiprime-a/` e `/workshop/` apenas redirecionam para ela.

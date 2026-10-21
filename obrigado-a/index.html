@@ -101,7 +101,7 @@ footer .in{padding-top:24px;padding-bottom:28px}
   <div class="in stack">
     <div class="stack">
       <span class="eyebrow">O que fazer agora</span>
-      <h2>Três passos, menos de dois minutos</h2>
+      <h2>Quatro passos, menos de cinco minutos</h2>
     </div>
     <div class="steps">
       <div class="step">
@@ -110,6 +110,14 @@ footer .in{padding-top:24px;padding-bottom:28px}
           <p>É por lá que chegam os lembretes e o aviso na hora de entrar. Fique tranquila: o grupo é só para avisos, sem conversa aberta.</p>
           <a class="btn" id="wa" data-ev="whatsapp_click" href="#" target="_blank" rel="noopener">Entrar no grupo de avisos <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           <span class="ph" id="wa-ph" hidden>link do grupo pendente (CONFIG.WHATSAPP_GROUP_URL)</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="body">
+          <h3>Responda a pesquisa rápida</h3>
+          <p>São poucas perguntas e elas ajudam a Nath a preparar o workshop para a sua realidade.</p>
+          <a class="btn" id="form" data-ev="survey_click" href="#" target="_blank" rel="noopener">Responder a pesquisa <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <span class="ph" id="form-ph" hidden>link da pesquisa pendente (CONFIG.FORM_URL)</span>
         </div>
       </div>
       <div class="step">
@@ -162,7 +170,8 @@ footer .in{padding-top:24px;padding-bottom:28px}
 /* ===== CONFIGURAÇÃO: único bloco que precisa ser editado ===== */
 var CONFIG = {
   GTM_ID: 'GTM-W4N7VFD9',  // container do GTM (mesmo da LP)
-  WHATSAPP_GROUP_URL: '',  // link do grupo de avisos no WhatsApp. Vazio = botão fica inerte e aparece aviso amarelo
+  WHATSAPP_GROUP_URL: 'https://chat.whatsapp.com/ItmmqyUmAD72mSBHenhdHc',  // link do grupo de avisos no WhatsApp. Vazio = botão fica inerte e aparece aviso amarelo
+  FORM_URL: 'https://docs.google.com/forms/d/1npBaGO18pG7xfZDVpGMUT5vRirXLZgpqLCbthlcA9tc/viewform',  // pesquisa pré-workshop
   SUPPORT_URL: '',         // canal de suporte (WhatsApp, e-mail ou formulário). Vazio = botão fica inerte e aparece aviso amarelo
   CRP: 'CRP 2331-4'
 };
@@ -180,6 +189,7 @@ if (CONFIG.GTM_ID) {
     });
   }
   wire('wa', CONFIG.WHATSAPP_GROUP_URL, 'wa-ph');
+  wire('form', CONFIG.FORM_URL, 'form-ph');
   wire('help', CONFIG.SUPPORT_URL, 'help-ph');
 
   // Agenda: link do Google Agenda com data, horário e fuso do evento

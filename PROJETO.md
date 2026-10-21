@@ -13,3 +13,9 @@
 |---|---|---|---|
 | `psicologiaemdoses.com.br/mp-Le01/psiprime-a/` | LP do ingresso (workshop 07/11) | `cta_click`, `begin_checkout` | publicada, checkout Hotmart configurado |
 | `psicologiaemdoses.com.br/mp-Le01/obrigado-a/` | Obrigado pós-compra do ingresso | `whatsapp_click`, `add_to_calendar_click`, `support_click` | pendente: WHATSAPP_GROUP_URL e SUPPORT_URL no CONFIG |
+
+
+## Atualizacao 21/10/2026
+- Pagina de obrigado oficial: https://psicologiaemdoses.com.br/cp-Le01/boas-vindas-a-ldobg/ (branch `cp-le01`, pasta `cp-Le01` no servidor).
+- `/mp-Le01/obrigado-a/` agora apenas redireciona para a URL oficial.
+- Link curto da LP: https://psicologiaemdoses.com.br/workshop/ (branch `link-workshop`).

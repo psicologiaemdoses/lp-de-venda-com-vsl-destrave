@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Vaga garantida | Viver de Terapia</title>
+<meta name="theme-color" content="#1F140D">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@1,600;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<style>
+:root{
+  --bg:#FFFFFF; --soft:#F7F2E8; --ink:#17120E; --muted:#5F574F; --line:#E9E2D6;
+  --gold:#E2B94E; --gold-deep:#8F6510; --coffee:#4A2E1B; --espresso:#1F140D; --on-dark:#FFF7E3;
+  --warn-bg:#FFF2B8; --warn-ink:#5C4300;
+  --sans:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --serif:Fraunces,Georgia,serif;
+  color-scheme:light;
+}
+html{-webkit-text-size-adjust:100%}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.6}
+p{margin:0}
+img{max-width:100%}
+[hidden]{display:none!important}
+h1,h2,h3{margin:0;font-weight:800;line-height:1.12;text-wrap:balance;letter-spacing:-.01em}
+h1{font-size:clamp(32px,8.6vw,54px)}
+h2{font-size:clamp(24px,6vw,34px)}
+h3{font-size:19px;line-height:1.25}
+em{font-family:var(--serif);font-style:italic;font-weight:700}
+.in{max-width:760px;margin:0 auto;padding:48px max(18px,env(safe-area-inset-left,0px));}
+.stack{display:flex;flex-direction:column;gap:20px}
+.center{text-align:center;align-items:center}
+.eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--gold-deep)}
+.lead{font-size:18px;color:var(--muted)}
+.dark{background:var(--espresso);color:var(--on-dark)}
+.dark .lead{color:#E3D3B2}
+.dark .eyebrow{color:var(--gold)}
+.soft{background:var(--soft)}
+.ph{background:var(--warn-bg);color:var(--warn-ink);border-radius:4px;padding:2px 8px;font-size:12px;font-weight:700;line-height:1.4}
+
+/* confirmação */
+.hero{background:radial-gradient(120% 90% at 50% 0%,#4A2E1B 0%,#1F140D 62%)}
+.hero .in{padding-top:44px;padding-bottom:48px}
+.avatar{width:96px;height:96px;border-radius:50%;object-fit:cover;object-position:center 18%;border:3px solid var(--gold);display:block}
+.check{width:44px;height:44px;border-radius:50%;background:var(--gold);display:grid;place-items:center;flex:none}
+.check svg{width:24px;height:24px;stroke:var(--espresso);fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.when{display:flex;flex-direction:column;gap:2px;border:1px solid rgba(226,185,78,.5);border-radius:14px;padding:16px 22px;background:rgba(255,255,255,.05);width:100%;max-width:420px}
+.when b{font-size:22px;line-height:1.2}
+.when span{color:#E3D3B2;font-size:15px}
+
+/* passos */
+.steps{display:flex;flex-direction:column;gap:16px;counter-reset:s}
+.step{display:grid;grid-template-columns:44px 1fr;gap:16px;border:1px solid var(--line);border-radius:16px;padding:20px;background:#fff}
+.step::before{counter-increment:s;content:counter(s);width:44px;height:44px;border-radius:50%;background:var(--espresso);color:var(--gold);font-weight:800;font-size:20px;display:grid;place-items:center}
+.step .body{display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+.step p{color:var(--muted);font-size:16px}
+
+/* botão (mesmo da LP) */
+.btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;max-width:480px;text-align:center;text-decoration:none;font:700 18px/1.2 var(--sans);color:#fff;border:0;border-radius:10px;padding:18px 22px;min-height:58px;cursor:pointer;
+  background-color:#328765;background-image:linear-gradient(45deg,#4CDF5C,#029F1A,#013E03);background-size:200% auto;box-shadow:3px 3px 4px rgba(0,0,0,.29);animation:animacaoGradiente 2s ease infinite;transition:transform .2s}
+.btn:hover{transform:translateY(-1px)}
+.btn svg{width:20px;height:20px;stroke:#fff;fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.btn.alt{background:#fff;background-image:none;color:var(--espresso);border:2px solid var(--espresso);box-shadow:none;animation:none}
+.btn.alt svg{stroke:var(--espresso)}
+.btn:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+@keyframes animacaoGradiente{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+@media (prefers-reduced-motion:reduce){.btn{animation:none}}
+
+/* uma dobra */
+.fold{min-height:100svh;display:flex;align-items:center;background:radial-gradient(120% 90% at 50% 0%,#4A2E1B 0%,#1F140D 62%)}
+.fold .in{width:100%;display:flex;flex-direction:column;gap:22px;padding-top:24px;padding-bottom:24px}
+.tight{gap:12px}
+.top{display:flex;gap:16px;align-items:center}
+.fold h1{font-size:clamp(28px,6.5vw,42px)}
+.fold h2{font-size:clamp(20px,4.6vw,26px)}
+.fold .lead{font-size:17px}
+.fold .avatar{width:72px;height:72px;flex:none}
+.fold .eyebrow{font-size:11px}
+.fold .steps{gap:12px}
+.fold .step{display:block;padding:16px 18px;background:#fff;color:var(--ink)}
+.fold .step::before{content:none}
+.fold .step h3{font-size:18px}
+.fold .step p{font-size:15px;line-height:1.5}
+.fold .step .btn{padding:14px 20px;font-size:17px;min-height:0}
+.tips h2{font-size:18px;margin-bottom:8px}
+.tips .list{gap:8px;font-size:15px;color:#E3D3B2}
+@media (min-width:860px){.fold .in{max-width:960px}.fold .steps{flex-direction:row;align-items:stretch}.fold .step{flex:1}}
+/* destaque e animacao */
+.reveal{opacity:0;transform:translateY(14px);animation:rise .6s cubic-bezier(.2,.7,.2,1) var(--d,0s) forwards}
+@keyframes rise{to{opacity:1;transform:none}}
+.fold .step.first{border:2px solid var(--gold);box-shadow:0 0 0 4px rgba(226,185,78,.18)}
+.fold .step.first .btn{animation:animacaoGradiente 2s ease infinite,pulse 2.4s ease-out 1.2s infinite}
+@keyframes pulse{0%{box-shadow:3px 3px 4px rgba(0,0,0,.29),0 0 0 0 rgba(76,223,92,.55)}70%{box-shadow:3px 3px 4px rgba(0,0,0,.29),0 0 0 14px rgba(76,223,92,0)}100%{box-shadow:3px 3px 4px rgba(0,0,0,.29),0 0 0 0 rgba(76,223,92,0)}}
+.mail{display:flex;gap:16px;align-items:flex-start;border:1px solid rgba(226,185,78,.55);border-radius:16px;padding:16px 18px;background:rgba(255,255,255,.06)}
+.mail-ic{width:48px;height:48px;border-radius:50%;background:var(--gold);display:grid;place-items:center;flex:none;animation:nudge 3s ease-in-out 1.5s infinite}
+.mail-ic svg{width:26px;height:26px;stroke:var(--espresso);fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+@keyframes nudge{0%,88%,100%{transform:none}92%{transform:rotate(-9deg)}96%{transform:rotate(8deg)}}
+.mail-tx{display:flex;flex-direction:column;gap:6px}
+.mail h3{color:var(--on-dark);font-size:18px}
+.mail p{font-size:15px;line-height:1.5;color:#E3D3B2}
+.mail mark{background:rgba(226,185,78,.22);color:var(--on-dark);font-weight:700;border-radius:4px;padding:0 4px}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;animation:none}.fold .step.first .btn,.mail-ic{animation:none}}
+/* blocos finais */
+.list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:12px}
+.list li{display:grid;grid-template-columns:24px 1fr;gap:12px}
+.list li::before{content:"";width:22px;height:22px;border-radius:50%;background:var(--gold) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231F140D' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center/14px no-repeat;margin-top:2px}
+.help{display:flex;flex-direction:column;gap:14px;align-items:flex-start}
+footer{background:var(--espresso);color:#CDBE9E;font-size:13px;text-align:center}
+footer .in{padding-top:24px;padding-bottom:28px}
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W4N7VFD9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<main>
+<section class="fold dark">
+  <div class="in">
+    <header class="top">
+      <img class="avatar" src="nathalia-andrade.jpg" width="72" height="72" alt="Nathália Andrade" decoding="async">
+      <div class="stack tight">
+        <span class="eyebrow">Compra confirmada · Sábado, 07/11, das 9h às 17h</span>
+        <h1>Sua vaga está <em>garantida.</em></h1>
+        <p class="lead">Faltam apenas 2 passos para você chegar pronta no dia.</p>
+      </div>
+    </header>
+
+    <div class="stack tight">
+      <h2>O que fazer agora? <em>2 passos, 2 minutos.</em></h2>
+      <div class="steps">
+        <div class="step first reveal" style="--d:.1s">
+          <div class="body">
+            <h3>Entre no grupo de avisos</h3>
+            <p>É por lá que você vai receber o lembrete na hora de entrar. E, além disso, é através do grupo que você recebe os avisos importantes do workshop. Fique tranquila: o grupo é só para avisos, sem conversa aberta.</p>
+            <a class="btn" id="wa" data-ev="whatsapp_click" href="#" target="_blank" rel="noopener">Entrar no grupo de avisos <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <span class="ph" id="wa-ph" hidden>link do grupo pendente (CONFIG.WHATSAPP_GROUP_URL)</span>
+          </div>
+        </div>
+        <div class="step reveal" style="--d:.2s">
+          <div class="body">
+            <h3>Responda para receber o melhor workshop para você</h3>
+            <p>Em menos de 2 minutos você responde essas poucas perguntas para ajudar a Nathália a preparar o workshop que melhor atende a sua realidade e que vai te ajudar justamente naquilo que você precisa.</p>
+            <a class="btn" id="form" data-ev="survey_click" href="#" target="_blank" rel="noopener">Responder a pesquisa <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <span class="ph" id="form-ph" hidden>link da pesquisa pendente (CONFIG.FORM_URL)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mail reveal" style="--d:.35s">
+      <div class="mail-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 7.5l8.5 6 8.5-6"/></svg></div>
+      <div class="mail-tx">
+        <h3>Confira o seu e-mail</h3>
+        <p>O <mark>link de acesso ao workshop ao vivo</mark> chega por e-mail. Se não encontrar, olhe também o <mark>spam</mark> e a aba de <mark>promoções</mark>.</p>
+        <p>Se você adicionou a gravação, o <mark>acesso à área de membros</mark> vem por e-mail também.</p>
+      </div>
+    </div>
+
+    <div class="tips reveal" style="--d:.5s">
+      <h2>Para tirar o melhor proveito do workshop Viver de Terapia</h2>
+      <ul class="list">
+        <li>Separe caderno e caneta (ou iPad). Assim você vai poder registrar os passos mais importantes para a sua captação de pessoas para terapia.</li>
+        <li>Reserve na sua agenda das 9h às 17h e escolha um lugar sem interrupções, para poder sair da aula sabendo exatamente o que fazer.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+</main>
+
+<script>
+/* ===== CONFIGURAÇÃO: único bloco que precisa ser editado ===== */
+var CONFIG = {
+  GTM_ID: 'GTM-W4N7VFD9',
+  CLARITY_ID: 'wpgc63qtcd',  // projeto Microsoft Clarity (mesmo da LP)  // container do GTM (mesmo da LP)
+  WHATSAPP_GROUP_URL: 'https://chat.whatsapp.com/ItmmqyUmAD72mSBHenhdHc',  // link do grupo de avisos no WhatsApp. Vazio = botão fica inerte e aparece aviso amarelo
+  FORM_URL: 'https://docs.google.com/forms/d/1npBaGO18pG7xfZDVpGMUT5vRirXLZgpqLCbthlcA9tc/viewform',  // pesquisa pré-workshop
+  CRP: 'CRP 2331-4'
+};
+window.dataLayer = window.dataLayer || [];
+if (CONFIG.CLARITY_ID) {
+  (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script",CONFIG.CLARITY_ID);
+}
+if (CONFIG.GTM_ID) {
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s);j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer',CONFIG.GTM_ID);
+}
+(function(){
+  function wire(id, url, phId){
+    var a = document.getElementById(id);
+    if (url) { a.href = url; } else { document.getElementById(phId).hidden = false; }
+    a.addEventListener('click', function(ev){
+      window.dataLayer.push({event: a.getAttribute('data-ev')});
+      if (!url) ev.preventDefault();
+    });
+  }
+  wire('wa', CONFIG.WHATSAPP_GROUP_URL, 'wa-ph');
+  wire('form', CONFIG.FORM_URL, 'form-ph');
+
+  [].forEach.call(document.querySelectorAll('[data-crp]'), function(el){ el.textContent = CONFIG.CRP ? '· ' + CONFIG.CRP : ''; });
+})();
+</script>
+</body>
+</html>

@@ -7,3 +7,9 @@
 - Config no começo do `<script>` (objeto CONFIG): GTM_ID `GTM-W4N7VFD9` (container compartilhado com o Destrave, separar por URL no GTM), CHECKOUT_URL Hotmart `Y108097135Q` (off z7z8hjjn), PRICE_CHANGES_AT pendente, CRP 2331-4 (informado pela Nathália).
 - Eventos: `cta_click` (cta_id) e `begin_checkout` (BRL 29.97). Clarity: instalar pelo GTM.
 - Pendências: link do checkout Hotmart, data da virada de preço, CRP, nomes e autorização das 6 alunas dos prints, revisão jurídica, página de obrigado (link do grupo WhatsApp).
+
+## Inventário de páginas
+| URL de produção | Objetivo | Evento | Observação |
+|---|---|---|---|
+| `psicologiaemdoses.com.br/mp-Le01/psiprime-a/` | LP do ingresso (workshop 07/11) | `cta_click`, `begin_checkout` | publicada, checkout Hotmart configurado |
+| `psicologiaemdoses.com.br/mp-Le01/obrigado-a/` | Obrigado pós-compra do ingresso | `whatsapp_click`, `add_to_calendar_click`, `support_click` | pendente: WHATSAPP_GROUP_URL e SUPPORT_URL no CONFIG |

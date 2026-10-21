@@ -3,7 +3,6 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="robots" content="noindex,nofollow">
 <title>Viver de Terapia | Workshop ao vivo 07/11</title>
 <meta name="description" content="Workshop ao vivo de um dia inteiro para psicólogas e terapeutas que querem ser encontradas pelos pacientes certos. Sábado, 07/11, das 9h às 17h.">
 <meta name="theme-color" content="#4A2E1B">
@@ -240,7 +239,7 @@ function loadTrackers(){
   }
 }
 (function(){
-  var go = function(){ (window.requestIdleCallback || function(f){setTimeout(f,1)})(loadTrackers, {timeout:1500}); };
+  var go = function(){ setTimeout(function(){ (window.requestIdleCallback || function(f){f()})(loadTrackers, {timeout:1000}); }, 3000); };
   if (document.readyState === 'complete') go(); else window.addEventListener('load', go);
   ['pointerdown','keydown','scroll'].forEach(function(e){ window.addEventListener(e, loadTrackers, {once:true, passive:true}); });
 })();
@@ -420,7 +419,7 @@ function loadTrackers(){
   <div class="in stack">
     <span class="eyebrow">Quem conduz</span>
     <div class="who">
-      <img class="photo" src="nathalia-andrade.jpg" width="640" height="960" alt="Nathália Andrade, psicóloga e criadora do Método Prime" loading="lazy" decoding="async">
+      <img class="photo" src="img/nathalia-andrade.webp" width="480" height="720" alt="Nathália Andrade, psicóloga e criadora do Método Prime" loading="lazy" decoding="async">
       <div class="stack">
         <h2>Nathália <em>Andrade</em></h2>
         <p class="role">Psicóloga <span data-crp></span></p>

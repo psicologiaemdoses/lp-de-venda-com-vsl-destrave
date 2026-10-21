@@ -68,6 +68,25 @@ em{font-family:var(--serif);font-style:italic;font-weight:700}
 @keyframes animacaoGradiente{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
 @media (prefers-reduced-motion:reduce){.btn{animation:none}}
 
+/* uma dobra */
+.fold{min-height:100svh;display:flex;align-items:center;background:radial-gradient(120% 90% at 50% 0%,#4A2E1B 0%,#1F140D 62%)}
+.fold .in{width:100%;display:flex;flex-direction:column;gap:22px;padding-top:24px;padding-bottom:24px}
+.tight{gap:12px}
+.top{display:flex;gap:16px;align-items:center}
+.fold h1{font-size:clamp(28px,6.5vw,42px)}
+.fold h2{font-size:clamp(20px,4.6vw,26px)}
+.fold .lead{font-size:17px}
+.fold .avatar{width:72px;height:72px;flex:none}
+.fold .eyebrow{font-size:11px}
+.fold .steps{gap:12px}
+.fold .step{display:block;padding:16px 18px;background:#fff;color:var(--ink)}
+.fold .step::before{content:none}
+.fold .step h3{font-size:18px}
+.fold .step p{font-size:15px;line-height:1.5}
+.fold .step .btn{padding:14px 20px;font-size:17px;min-height:0}
+.tips h2{font-size:18px;margin-bottom:8px}
+.tips .list{gap:8px;font-size:15px;color:#E3D3B2}
+@media (min-width:860px){.fold .in{max-width:960px}.fold .steps{flex-direction:row;align-items:stretch}.fold .step{flex:1}}
 /* blocos finais */
 .list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:12px}
 .list li{display:grid;grid-template-columns:24px 1fr;gap:12px}
@@ -81,90 +100,49 @@ footer .in{padding-top:24px;padding-bottom:28px}
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W4N7VFD9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <main>
-<!-- 1. CONFIRMAÇÃO -->
-<section class="hero dark">
-  <div class="in stack center">
-    <img class="avatar" src="nathalia-andrade.jpg" width="96" height="96" alt="Nathália Andrade" decoding="async">
-    <div class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
-    <span class="eyebrow">Compra confirmada</span>
-    <h1>Sua vaga está <em>garantida.</em></h1>
-    <p class="lead">Workshop ao vivo com a Nathália Andrade. Faltam só três passos rápidos para você chegar pronta no dia.</p>
-    <div class="when">
-      <b>Sábado, 07/11/2026</b>
-      <span>Das 9h às 17h · ao vivo</span>
-    </div>
-  </div>
-</section>
+<section class="fold dark">
+  <div class="in">
+    <header class="top">
+      <img class="avatar" src="nathalia-andrade.jpg" width="72" height="72" alt="Nathália Andrade" decoding="async">
+      <div class="stack tight">
+        <span class="eyebrow">Compra confirmada · Sábado, 07/11, das 9h às 17h</span>
+        <h1>Sua vaga está <em>garantida.</em></h1>
+        <p class="lead">Faltam apenas 2 passos para você chegar pronta no dia.</p>
+      </div>
+    </header>
 
-<!-- 2. TRÊS PASSOS -->
-<section>
-  <div class="in stack">
-    <div class="stack">
-      <span class="eyebrow">O que fazer agora</span>
-      <h2>Quatro passos, menos de cinco minutos</h2>
-    </div>
-    <div class="steps">
-      <div class="step">
-        <div class="body">
-          <h3>Entre no grupo de avisos</h3>
-          <p>É por lá que chegam os lembretes e o aviso na hora de entrar. Fique tranquila: o grupo é só para avisos, sem conversa aberta.</p>
-          <a class="btn" id="wa" data-ev="whatsapp_click" href="#" target="_blank" rel="noopener">Entrar no grupo de avisos <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-          <span class="ph" id="wa-ph" hidden>link do grupo pendente (CONFIG.WHATSAPP_GROUP_URL)</span>
+    <div class="stack tight">
+      <h2>O que fazer agora? <em>2 passos, 2 minutos.</em></h2>
+      <div class="steps">
+        <div class="step">
+          <div class="body">
+            <h3>Entre no grupo de avisos</h3>
+            <p>É por lá que você vai receber o lembrete na hora de entrar. E, além disso, é através do grupo que você vai receber o link para acessar o workshop. Fique tranquila: o grupo é só para avisos, sem conversa aberta.</p>
+            <a class="btn" id="wa" data-ev="whatsapp_click" href="#" target="_blank" rel="noopener">Entrar no grupo de avisos <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <span class="ph" id="wa-ph" hidden>link do grupo pendente (CONFIG.WHATSAPP_GROUP_URL)</span>
+          </div>
         </div>
-      </div>
-      <div class="step">
-        <div class="body">
-          <h3>Responda a pesquisa rápida</h3>
-          <p>São poucas perguntas e elas ajudam a Nath a preparar o workshop para a sua realidade.</p>
-          <a class="btn" id="form" data-ev="survey_click" href="#" target="_blank" rel="noopener">Responder a pesquisa <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-          <span class="ph" id="form-ph" hidden>link da pesquisa pendente (CONFIG.FORM_URL)</span>
-        </div>
-      </div>
-      <div class="step">
-        <div class="body">
-          <h3>Salve a data na sua agenda</h3>
-          <p>Sábado, 07/11, das 9h às 17h. Marque agora para reservar o dia inteiro.</p>
-          <a class="btn alt" id="cal" data-ev="add_to_calendar_click" href="#" target="_blank" rel="noopener">Adicionar à minha agenda <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        </div>
-      </div>
-      <div class="step">
-        <div class="body">
-          <h3>Confira o seu e-mail</h3>
-          <p>O link de acesso ao workshop ao vivo chega por e-mail. Se não encontrar, olhe também o spam e a aba de promoções. Se você adicionou a gravação, o acesso à área de membros vem por e-mail também.</p>
+        <div class="step">
+          <div class="body">
+            <h3>Responda para receber o melhor workshop para você</h3>
+            <p>Em menos de 2 minutos você responde essas poucas perguntas para ajudar a Natália a preparar o workshop que melhor atende a sua realidade e que vai te ajudar justamente naquilo que você precisa.</p>
+            <a class="btn" id="form" data-ev="survey_click" href="#" target="_blank" rel="noopener">Responder a pesquisa <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <span class="ph" id="form-ph" hidden>link da pesquisa pendente (CONFIG.FORM_URL)</span>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- 3. PREPARE-SE -->
-<section class="soft">
-  <div class="in stack">
-    <h2>Para aproveitar o dia</h2>
-    <ul class="list">
-      <li>Separe caderno e caneta: cada bloco do dia termina com algo escrito à mão.</li>
-      <li>Reserve o sábado inteiro, das 9h às 17h, e escolha um lugar sem interrupções.</li>
-      <li>Entre com um pouco de antecedência, pelo link que chega por e-mail.</li>
-    </ul>
-  </div>
-</section>
-
-<!-- 4. GARANTIA E SUPORTE -->
-<section>
-  <div class="in stack">
-    <h2>Dúvidas?</h2>
-    <p class="lead">Você tem 7 dias de garantia a partir da compra. Se precisar, o pedido de reembolso é feito pela Hotmart.</p>
-    <div class="help">
-      <a class="btn alt" id="help" data-ev="support_click" href="#" target="_blank" rel="noopener">Falar com o suporte <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      <span class="ph" id="help-ph" hidden>canal de suporte pendente (CONFIG.SUPPORT_URL)</span>
+    <div class="tips">
+      <h2>Para aproveitar o dia</h2>
+      <ul class="list">
+        <li>Separe caderno e caneta (ou iPad): cada bloco do dia termina com algo escrito.</li>
+        <li>Reserve o sábado inteiro, das 9h às 17h, e escolha um lugar sem interrupções.</li>
+      </ul>
     </div>
   </div>
 </section>
 </main>
-
-<footer>
-  <div class="in">Psicologia em Doses · Nathália Andrade, psicóloga <span data-crp></span></div>
-</footer>
 
 <script>
 /* ===== CONFIGURAÇÃO: único bloco que precisa ser editado ===== */
@@ -173,7 +151,6 @@ var CONFIG = {
   CLARITY_ID: 'wpgc63qtcd',  // projeto Microsoft Clarity (mesmo da LP)  // container do GTM (mesmo da LP)
   WHATSAPP_GROUP_URL: 'https://chat.whatsapp.com/ItmmqyUmAD72mSBHenhdHc',  // link do grupo de avisos no WhatsApp. Vazio = botão fica inerte e aparece aviso amarelo
   FORM_URL: 'https://docs.google.com/forms/d/1npBaGO18pG7xfZDVpGMUT5vRirXLZgpqLCbthlcA9tc/viewform',  // pesquisa pré-workshop
-  SUPPORT_URL: '',         // canal de suporte (WhatsApp, e-mail ou formulário). Vazio = botão fica inerte e aparece aviso amarelo
   CRP: 'CRP 2331-4'
 };
 window.dataLayer = window.dataLayer || [];
@@ -194,16 +171,6 @@ if (CONFIG.GTM_ID) {
   }
   wire('wa', CONFIG.WHATSAPP_GROUP_URL, 'wa-ph');
   wire('form', CONFIG.FORM_URL, 'form-ph');
-  wire('help', CONFIG.SUPPORT_URL, 'help-ph');
-
-  // Agenda: link do Google Agenda com data, horário e fuso do evento
-  var cal = document.getElementById('cal');
-  cal.href = 'https://calendar.google.com/calendar/render?action=TEMPLATE'
-    + '&text=' + encodeURIComponent('Viver de Terapia | Workshop ao vivo')
-    + '&dates=20261107T090000/20261107T170000&ctz=America%2FSao_Paulo'
-    + '&details=' + encodeURIComponent('Workshop ao vivo com a Nathália Andrade. O link de acesso chega por e-mail. Avisos no grupo do WhatsApp.')
-    + '&location=' + encodeURIComponent('Online');
-  cal.addEventListener('click', function(){ window.dataLayer.push({event: cal.getAttribute('data-ev')}); });
 
   [].forEach.call(document.querySelectorAll('[data-crp]'), function(el){ el.textContent = CONFIG.CRP ? '· ' + CONFIG.CRP : ''; });
 })();

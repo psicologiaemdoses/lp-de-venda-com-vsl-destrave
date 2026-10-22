@@ -311,12 +311,12 @@ function loadTrackers(){
     </div>
     <div class="slider" id="slider" aria-roledescription="carrossel" aria-label="Mensagens de alunas">
       <div class="track" id="track" tabindex="0">
-      <figure class="slide"><div class="print"><img src="img/print-1-v2.webp" alt="Mensagem de aluna contando que atendeu a primeira paciente vinda do Instagram" loading="lazy" width="640" height="656"></div><figcaption><q>“Hoje eu atendi a primeira paciente que veio do Instagram.”</q><small>Aluna do Método Prime</small></figcaption></figure>
-      <figure class="slide"><div class="print"><img src="img/print-2-v2.webp" alt="Mensagem de aluna: minha primeira paciente internacional, ela mora na Irlanda" loading="lazy" width="640" height="325"></div><figcaption><q>“Minha primeira paciente internacional.”</q><small>Aluna do Método Prime</small></figcaption></figure>
-      <figure class="slide"><div class="print"><img src="img/print-3-v2.webp" alt="Mensagem de aluna: captei 3 pacientes em 2 semanas, uma dos Estados Unidos, uma da Irlanda e uma de SP" loading="lazy" width="599" height="212"></div><figcaption><q>“Captei 3 pacientes em 2 semanas.”</q><small>Aluna do Método Prime</small></figcaption></figure>
-      <figure class="slide"><div class="print"><img src="img/print-4-v2.webp" alt="Mensagem de aluna: cheguei na Suíça através do Instagram, sem tráfego pago" loading="lazy" width="640" height="265"></div><figcaption><q>“Cheguei na Suíça através do Instagram. Sem tráfego pago.”</q><small>Aluna do Método Prime</small></figcaption></figure>
-      <figure class="slide"><div class="print"><img src="img/print-5-v2.webp" alt="Mensagem de aluna agradecendo e contando que fechou a segunda paciente online" loading="lazy" width="640" height="560"></div><figcaption><q>“Acabei de fechar com a 2ª paciente online.”</q><small>Aluna do Método Prime</small></figcaption></figure>
-      <figure class="slide"><div class="print"><img src="img/print-6-v2.webp" alt="Mensagem de aluna contando que bateu a meta dos 10k" loading="lazy" width="640" height="646"></div><figcaption><q>“Consegui bater a meta dos 10k.”</q><small>Aluna do Método Prime</small></figcaption></figure>
+      <figure class="slide"><div class="print"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/print-1-v2.webp" alt="Mensagem de aluna contando que atendeu a primeira paciente vinda do Instagram" width="640" height="656"></div><figcaption><q>“Hoje eu atendi a primeira paciente que veio do Instagram.”</q><small>Aluna do Método Prime</small></figcaption></figure>
+      <figure class="slide"><div class="print"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/print-2-v2.webp" alt="Mensagem de aluna: minha primeira paciente internacional, ela mora na Irlanda" width="640" height="325"></div><figcaption><q>“Minha primeira paciente internacional.”</q><small>Aluna do Método Prime</small></figcaption></figure>
+      <figure class="slide"><div class="print"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/print-3-v2.webp" alt="Mensagem de aluna: captei 3 pacientes em 2 semanas, uma dos Estados Unidos, uma da Irlanda e uma de SP" width="599" height="212"></div><figcaption><q>“Captei 3 pacientes em 2 semanas.”</q><small>Aluna do Método Prime</small></figcaption></figure>
+      <figure class="slide"><div class="print"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/print-4-v2.webp" alt="Mensagem de aluna: cheguei na Suíça através do Instagram, sem tráfego pago" width="640" height="265"></div><figcaption><q>“Cheguei na Suíça através do Instagram. Sem tráfego pago.”</q><small>Aluna do Método Prime</small></figcaption></figure>
+      <figure class="slide"><div class="print"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/print-5-v2.webp" alt="Mensagem de aluna agradecendo e contando que fechou a segunda paciente online" width="640" height="560"></div><figcaption><q>“Acabei de fechar com a 2ª paciente online.”</q><small>Aluna do Método Prime</small></figcaption></figure>
+      <figure class="slide"><div class="print"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/print-6-v2.webp" alt="Mensagem de aluna contando que bateu a meta dos 10k" width="640" height="646"></div><figcaption><q>“Consegui bater a meta dos 10k.”</q><small>Aluna do Método Prime</small></figcaption></figure>
       </div>
       <div class="ctrl">
         <button type="button" class="arrow" id="prev" aria-label="Mensagem anterior"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
@@ -665,6 +665,17 @@ function loadTrackers(){
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start);
   else start();
+})();
+
+(function(){
+  var imgs=[].slice.call(document.querySelectorAll('img[data-src]'));
+  function load(i){ if(i.dataset.src){ i.src=i.dataset.src; i.removeAttribute('data-src'); } }
+  if('IntersectionObserver' in window){
+    var groups=new Map();
+    imgs.forEach(function(i){ var t=i.closest('#slider')||i; (groups.get(t)||groups.set(t,[]).get(t)).push(i); });
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){ if(e.isIntersecting){ (groups.get(e.target)||[]).forEach(load); io.unobserve(e.target); } })},{rootMargin:'600px 0px'});
+    groups.forEach(function(v,t){ io.observe(t); });
+  } else { window.addEventListener('load',function(){imgs.forEach(load)}); }
 })();
 </script>
 </body>

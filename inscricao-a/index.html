@@ -11,8 +11,8 @@
 <link rel="preload" as="image" href="img/hero-wide.webp" media="(min-width:860px)" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@1,600;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@1,600;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"></noscript>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@1,600;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=optional" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@1,600;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=optional"></noscript>
 <style>html{-webkit-text-size-adjust:100%}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 <style>
 /* Layout: página clássica de venda. Primeira dobra escura sobre foto, resto branco e marfim, botão verde com gradiente em movimento (mesmo da referência).
@@ -58,11 +58,12 @@ mark{background:linear-gradient(transparent 58%,var(--gold) 58%);color:inherit;p
 
 /* botão: mesmo gradiente e movimento da LP de referência */
 .btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;max-width:480px;text-align:center;text-decoration:none;font:700 18px/1.2 var(--sans);color:#fff;border:0;border-radius:10px;padding:20px 22px;min-height:60px;cursor:pointer;
-  background-color:#328765;background-image:linear-gradient(45deg,#4CDF5C,#029F1A,#013E03);background-size:200% auto;box-shadow:3px 3px 4px rgba(0,0,0,.29);animation:animacaoGradiente 2s ease infinite;transition:transform .2s}
+  position:relative;overflow:hidden;isolation:isolate;background:#029F1A;box-shadow:3px 3px 4px rgba(0,0,0,.29);transition:transform .2s}
+.btn::before{content:"";position:absolute;top:0;left:0;width:200%;height:100%;z-index:-1;background:linear-gradient(90deg,#4CDF5C,#029F1A,#013E03,#029F1A,#4CDF5C);animation:btnshift 3s ease-in-out infinite alternate;will-change:transform}
 .btn:hover{transform:translateY(-1px)}
 .btn svg{width:20px;height:20px;stroke:#fff;fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;flex:none}
 .btn:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
-@keyframes animacaoGradiente{0%{background-position:0 50%}50%{background-position:100% 50%}100%{background-position:0 50%}}
+@keyframes btnshift{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 .fine{font-size:13.5px;color:var(--muted)}
 .dark .fine{color:#CBB98F}
 
@@ -216,7 +217,7 @@ footer .in{padding-block:30px;display:flex;flex-direction:column;gap:8px}
 .dots button::before{content:"";position:absolute;left:50%;top:50%;width:10px;height:10px;margin:-5px 0 0 -5px;border-radius:99px;background:#D8CDB8;transition:width .25s,margin .25s,background .25s}
 .dots button[aria-selected="true"]::before{width:26px;margin-left:-13px;background:var(--coffee)}
 
-@media (prefers-reduced-motion:reduce){.track{scroll-behavior:auto}.btn,.ticker div,.hero .pill i{animation:none}}
+@media (prefers-reduced-motion:reduce){.track{scroll-behavior:auto}.btn::before,.ticker div,.hero .pill i{animation:none}}
 </style>
 <script>
 /* ===== CONFIGURAÇÃO: único bloco que precisa ser editado ===== */
@@ -251,6 +252,7 @@ function loadTrackers(){
 <!-- End Google Tag Manager (noscript) -->
 <div class="topbar" data-needs-deadline hidden>Esse preço muda em <span class="timer" data-timer>47:59:59</span> <span>·</span> <b>R$ 29,97</b></div>
 
+<main>
 <!-- 1. ABERTURA COM FOTO DE FUNDO -->
 <section class="herowrap">
   <div class="in hero">
@@ -516,6 +518,7 @@ function loadTrackers(){
     <p class="fine">R$ 29,97 por tempo limitado · Garantia de 7 dias</p>
   </div>
 </section>
+</main>
 
 
 <div class="sticky" id="sticky">

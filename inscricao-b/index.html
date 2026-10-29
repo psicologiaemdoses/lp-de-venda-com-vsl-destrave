@@ -7,7 +7,7 @@
 <meta name="description" content="Workshop ao vivo Viver de Terapia: sábado, 14/11, das 9h às 17h. Aprenda a ser encontrada por quem precisa da sua terapia, com Nathália Andrade.">
 <meta name="theme-color" content="#4A2E1B">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231F140D'/%3E%3Ctext x='16' y='23' font-size='20' text-anchor='middle' fill='%23E2B94E' font-family='Georgia' font-style='italic' font-weight='700'%3EV%3C/text%3E%3C/svg%3E">
-<link rel="preload" as="image" href="img/hero-wide-v2.webp" fetchpriority="high">
+<link rel="preload" as="image" href="img/hero-tall-v2.webp" fetchpriority="high">
 <link rel="stylesheet" href="fonts/fonts-v1.css" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="fonts/fonts-v1.css"></noscript>
 <style>html{-webkit-text-size-adjust:100%}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
@@ -20,7 +20,7 @@
   --warn-bg:#FFF2B8; --warn-ink:#5C4300;
   --sans:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
   --serif:Fraunces,Georgia,serif;
-  --hero-wide:url("img/hero-wide-v2.webp");
+  --hero-wide:url("img/hero-tall-v2.webp");
     color-scheme:light;
 }
 *{box-sizing:border-box}
@@ -65,7 +65,7 @@ mark{background:linear-gradient(transparent 58%,var(--gold) 58%);color:inherit;p
 
 /* primeira dobra com foto de fundo */
 .herowrap{position:relative;isolation:isolate;color:var(--on-dark);background:var(--espresso)}
-.herowrap::before{content:"";position:absolute;inset:0;z-index:-2;background:var(--hero-wide) 60% center/cover no-repeat}
+.herowrap::before{content:"";position:absolute;inset:0;z-index:-2;background:var(--hero-wide) center top/cover no-repeat}
 .herowrap::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(23,14,8,.94) 0%,rgba(23,14,8,.78) 45%,rgba(23,14,8,.4) 100%)}
 .hero{display:grid;grid-template-columns:1fr;gap:28px;align-items:center}
 .hero .pill{display:inline-flex;align-self:flex-start;gap:8px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);border-radius:99px;padding:6px 14px;font-size:13.5px;font-weight:600}
@@ -215,14 +215,18 @@ footer .in{padding-block:30px;display:flex;flex-direction:column;gap:8px}
 .lote i{width:9px;height:9px;border-radius:50%;background:#fff;animation:blink 1.1s ease-in-out infinite;flex:none}
 .hero .pricebox{background:none;box-shadow:none;color:var(--on-dark);padding:0;align-items:flex-start;text-align:left}
 .hero .pricebox .fine{color:#CBB98F}
-@media (min-width:860px){.hero{grid-template-columns:1fr}.hero>.stack{max-width:680px}.hero .pricebox{display:none}}
+@media (min-width:860px){.hero{grid-template-columns:1fr}.hero>.stack{max-width:600px}.hero .pricebox{display:none}
+  .herowrap::before{inset:0 0 0 auto;width:min(48%,640px);background-position:center top}
+  .herowrap::after{background:linear-gradient(90deg,var(--espresso) 0%,var(--espresso) 52%,rgba(31,20,13,.55) 62%,rgba(31,20,13,0) 80%)}}
 .promessa{font-size:clamp(18px,4.8vw,22px);line-height:1.3;font-weight:600;color:#fff;background:rgba(226,185,78,.16);border-left:4px solid var(--gold);border-radius:0 12px 12px 0;padding:14px 16px;max-width:560px}
 .promessa strong{color:var(--gold);font-weight:800}
 /* mobile: toda a promessa na primeira dobra, em ordem de prioridade: o que e, a promessa, o que a pessoa recebe */
 @media (max-width:859px){
   .hero{display:flex;flex-direction:column;gap:10px}
   .hero>.stack,.hero .pricebox{display:contents}
-  .herowrap .hero{padding-top:70px;padding-bottom:34px}
+  .herowrap::before{inset:0 0 auto 0;height:430px;background:var(--hero-wide) center top/cover no-repeat}
+  .herowrap::after{inset:0 0 auto 0;height:432px;background:linear-gradient(180deg,rgba(31,20,13,0) 0%,rgba(31,20,13,.1) 50%,rgba(31,20,13,.78) 80%,var(--espresso) 100%)}
+  .herowrap .hero{padding-top:236px;padding-bottom:30px}
   .hero .pill{position:absolute;top:14px;left:max(18px,env(safe-area-inset-left,0px));z-index:2;font-size:12.5px;padding:6px 13px;background:rgba(20,10,5,.62);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
   .hero h1{order:2}
   .herowrap h1{font-size:clamp(28px,8.4vw,38px);line-height:1.08}

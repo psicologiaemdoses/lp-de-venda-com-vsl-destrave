@@ -219,13 +219,16 @@ footer .in{padding-block:30px;display:flex;flex-direction:column;gap:8px}
 /* aviso de lote (vermelho) */
 .lote{display:inline-flex;align-items:center;gap:9px;background:#C8141E;color:#fff;border-radius:12px;padding:10px 15px;font:600 14px/1.3 var(--sans);max-width:440px;text-align:left;box-shadow:0 8px 18px -10px rgba(200,20,30,.8);align-self:center}
 .lote i{width:9px;height:9px;border-radius:50%;background:#fff;animation:blink 1.1s ease-in-out infinite;flex:none}
+.hero .pricebox{background:none;box-shadow:none;color:var(--on-dark);padding:0;align-items:flex-start;text-align:left}
+.hero .pricebox .fine{color:#CBB98F}
+@media (min-width:860px){.hero{grid-template-columns:1fr}.hero>.stack{max-width:680px}.hero .pricebox{display:none}}
 /* mobile: botao de compra na primeira dobra (texto longo desce para depois do botao) */
 @media (max-width:859px){
   .hero{display:flex;flex-direction:column;gap:14px}
   .hero>.stack{display:contents}
   .hero .pill{order:1}.hero h1{order:2}.hero .pricebox{order:3}.hero .sub{order:4}
   .herowrap h1{font-size:clamp(25px,7vw,34px)}
-  .hero .pricebox{padding:16px 16px;gap:10px}
+  .hero .pricebox{gap:10px}
 }
 @media (prefers-reduced-motion:reduce){.track{scroll-behavior:auto}.btn::before,.ticker div,.hero .pill i,.lote i{animation:none}}
 </style>
@@ -281,7 +284,6 @@ function loadTrackers(){
         <div><b data-u="m">00</b><span>min</span></div>
         <div><b data-u="s">00</b><span>seg</span></div>
       </div>
-      <a class="btn" href="https://pay.hotmart.com/Y108097135Q?off=z7z8hjjn&checkoutMode=10" data-cta="hero">Quero garantir minha vaga <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       <p class="fine">Garantia de 7 dias. Pagamento seguro.</p>
       <p class="lote"><i></i><span>Esse lote vira em breve e o preço aumenta.</span></p>
     </div>

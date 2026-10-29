@@ -8,7 +8,7 @@
 <meta name="theme-color" content="#4A2E1B">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231F140D'/%3E%3Ctext x='16' y='23' font-size='20' text-anchor='middle' fill='%23E2B94E' font-family='Georgia' font-style='italic' font-weight='700'%3EV%3C/text%3E%3C/svg%3E">
 <link rel="preload" as="image" href="img/hero-tall-v2.webp" media="(max-width:859px)" fetchpriority="high">
-<link rel="preload" as="image" href="img/hero-wide-v2.webp" media="(min-width:860px)" fetchpriority="high">
+<link rel="preload" as="image" href="img/hero-tall-v2.webp" media="(min-width:860px)" fetchpriority="high">
 <link rel="stylesheet" href="fonts/fonts-v1.css" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="fonts/fonts-v1.css"></noscript>
 <style>html{-webkit-text-size-adjust:100%}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
@@ -89,7 +89,9 @@ mark{background:linear-gradient(transparent 58%,var(--gold) 58%);color:inherit;p
 .count div{background:var(--espresso);color:var(--on-dark);border-radius:10px;padding:10px 4px;text-align:center}
 .count b{display:block;font-size:26px;line-height:1.1;font-variant-numeric:tabular-nums}
 .count span{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold)}
-@media (min-width:860px){.hero{grid-template-columns:1.15fr .85fr;gap:48px}}
+@media (min-width:860px){.hero{grid-template-columns:1fr;gap:28px}.hero>.stack{max-width:600px}.pricebox{max-width:420px;align-items:flex-start}
+  .herowrap::before{inset:0 0 0 auto;width:min(48%,640px);background:var(--hero-tall) center top/cover no-repeat}
+  .herowrap::after{background:linear-gradient(90deg,var(--espresso) 0%,var(--espresso) 52%,rgba(31,20,13,.55) 62%,rgba(31,20,13,0) 80%)}}
 .photo-note{position:absolute;right:10px;top:10px;z-index:1}
 
 /* faixa em marfim, no lugar do amarelo */
@@ -215,6 +217,14 @@ footer .in{padding-block:30px;display:flex;flex-direction:column;gap:8px}
 .dots button::before{content:"";position:absolute;left:50%;top:50%;width:10px;height:10px;margin:-5px 0 0 -5px;border-radius:99px;background:#D8CDB8;transition:width .25s,margin .25s,background .25s}
 .dots button[aria-selected="true"]::before{width:26px;margin-left:-13px;background:var(--coffee)}
 
+
+/* opcoes: ao vivo e gravacao */
+.opts{display:grid;grid-template-columns:1fr;gap:16px}
+@media (min-width:760px){.opts{grid-template-columns:1fr 1fr}}
+.opt .tagp{align-self:flex-start;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;border:1.5px solid var(--ink);border-radius:99px;padding:4px 12px;color:var(--ink)}
+.opt .tagp.on{background:var(--gold);border-color:var(--gold)}
+.opt .pr{font-size:34px;font-weight:800;line-height:1;font-variant-numeric:tabular-nums}
+.opt .list li{font-size:16px}
 @media (prefers-reduced-motion:reduce){.track{scroll-behavior:auto}.btn::before,.ticker div,.hero .pill i{animation:none}}
 </style>
 <script>
@@ -282,6 +292,41 @@ function loadTrackers(){
   <span>Viver de Terapia</span><i></i><span>Workshop ao vivo</span><i></i><span>Sábado 14/11</span><i></i><span>9h às 17h</span><i></i><span>Para psicólogas e terapeutas</span><i></i>
   <span>Viver de Terapia</span><i></i><span>Workshop ao vivo</span><i></i><span>Sábado 14/11</span><i></i><span>9h às 17h</span><i></i><span>Para psicólogas e terapeutas</span><i></i>
 </div></div>
+
+<!-- 1b. COMO PARTICIPAR: ao vivo ou com gravacao -->
+<section class="soft" id="opcoes">
+  <div class="in stack">
+    <div class="stack center">
+      <span class="eyebrow">Como participar</span>
+      <h2>Ao vivo, <em>com a opção de levar a gravação.</em></h2>
+      <p class="lead">Você já vê aqui o que cada opção inclui, antes de ir para o pagamento.</p>
+    </div>
+    <div class="opts">
+      <article class="block opt">
+        <span class="tagp on">Ingresso</span>
+        <h3>Workshop ao vivo</h3>
+        <p class="pr">R$ 29,97</p>
+        <ul class="list">
+          <li>Sábado, 14/11, das 9h às 17h, ao vivo</li>
+          <li>As 4 entregas do dia, com momento de perguntas</li>
+          <li>Link de acesso enviado por e-mail depois da compra</li>
+        </ul>
+      </article>
+      <article class="block opt">
+        <span class="tagp">Opcional, na hora da compra</span>
+        <h3>Gravação + 15 Conteúdos Prontos</h3>
+        <p class="pr">R$ 97,97</p>
+        <ul class="list">
+          <li>A gravação do workshop</li>
+          <li>Os 15 Conteúdos Prontos para Fechar Terapia</li>
+          <li>Materiais de apoio na plataforma, liberados só para quem adiciona a gravação</li>
+        </ul>
+      </article>
+    </div>
+    <p class="fine" style="text-align:center">A gravação não está inclusa no ingresso. Você escolhe se quer adicioná-la no pagamento.</p>
+    <div class="stack center"><a class="btn" href="https://pay.hotmart.com/Y108097135Q?off=z7z8hjjn&checkoutMode=10" data-cta="opcoes">Quero garantir minha vaga <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+  </div>
+</section>
 
 <!-- 2. IDENTIFICAÇÃO -->
 <section>
@@ -477,6 +522,7 @@ function loadTrackers(){
         <li>Workshop ao vivo, sábado 14/11, das 9h às 17h</li>
         <li>Os 4 blocos, com momento de perguntas</li>
         <li>Link de acesso enviado por e-mail depois da compra</li>
+        <li>Quer a gravação? Adicione na hora da compra, por R$ 97,97</li>
       </ul>
       <div class="lotes">
         <div class="on"><span>Agora</span><span>R$ 29,97</span></div>

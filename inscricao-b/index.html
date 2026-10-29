@@ -222,13 +222,16 @@ footer .in{padding-block:30px;display:flex;flex-direction:column;gap:8px}
 .hero .pricebox{background:none;box-shadow:none;color:var(--on-dark);padding:0;align-items:flex-start;text-align:left}
 .hero .pricebox .fine{color:#CBB98F}
 @media (min-width:860px){.hero{grid-template-columns:1fr}.hero>.stack{max-width:680px}.hero .pricebox{display:none}}
-/* mobile: botao de compra na primeira dobra (texto longo desce para depois do botao) */
+/* mobile: toda a promessa na primeira dobra, em ordem de prioridade: o que e, a promessa, o que a pessoa recebe */
 @media (max-width:859px){
-  .hero{display:flex;flex-direction:column;gap:14px}
-  .hero>.stack{display:contents}
-  .hero .pill{order:1}.hero h1{order:2}.hero .pricebox{order:3}.hero .sub{order:4}
-  .herowrap h1{font-size:clamp(25px,7vw,34px)}
-  .hero .pricebox{gap:10px}
+  .hero{display:flex;flex-direction:column;gap:10px}
+  .hero>.stack,.hero .pricebox{display:contents}
+  .herowrap .hero{padding-top:178px;padding-bottom:30px}
+  .hero .pill{order:1;font-size:12.5px;padding:5px 12px}
+  .hero h1{order:2}
+  .herowrap h1{font-size:clamp(26px,7.2vw,34px);line-height:1.1}
+  .hero .s1{order:3}.hero .s3{order:4}.hero .lote{order:5;align-self:flex-start}.hero .s2{order:6}.hero .pricebox .fine{display:none}
+  .hero .sub{font-size:15.5px;line-height:1.42}
 }
 @media (prefers-reduced-motion:reduce){.track{scroll-behavior:auto}.btn::before,.ticker div,.hero .pill i,.lote i{animation:none}}
 </style>
@@ -272,9 +275,9 @@ function loadTrackers(){
     <div class="stack">
       <span class="pill"><i></i>Workshop ao vivo · sábado, 14/11 · 9h às 17h</span>
       <h1 id="h1-principal">Não adianta ser <em>ótima na terapia</em> se quem precisa da sua ajuda <mark>não sabe que você existe.</mark></h1>
-      <p class="sub" id="sub-principal">Você é psicóloga ou terapeuta e quer transformar mais vidas, ajudar mais pessoas e viver da terapia, online ou presencial.</p>
-      <p class="sub">Você investiu na sua formação. É dedicada. Quer ajudar de verdade. Mas se o seu futuro paciente ou cliente não consegue te encontrar, nada disso chega até ele.</p>
-      <p class="sub"><strong>Não é justo. Mas dá para mudar</strong>, e não precisa de dancinha, nem de virar outra pessoa. <span style="color:var(--gold);font-weight:700">No sábado, 14/11, você aprende a ser encontrada por quem você pode ajudar.</span></p>
+      <p class="sub s1" id="sub-principal">Você é psicóloga ou terapeuta e quer transformar mais vidas, ajudar mais pessoas e viver da terapia, online ou presencial.</p>
+      <p class="sub s2">Você investiu na sua formação. É dedicada. Quer ajudar de verdade. Mas se o seu futuro paciente ou cliente não consegue te encontrar, nada disso chega até ele.</p>
+      <p class="sub s3"><strong>Não é justo. Mas dá para mudar</strong>, e não precisa de dancinha, nem de virar outra pessoa. <span style="color:var(--gold);font-weight:700">No sábado, 14/11, você aprende a ser encontrada por quem você pode ajudar.</span></p>
     </div>
     <div class="pricebox">
       <span class="changes" data-needs-deadline hidden>Esse preço muda em</span>

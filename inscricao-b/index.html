@@ -226,7 +226,6 @@ footer .in{padding-block:30px;display:flex;flex-direction:column;gap:8px}
   .hero .pill{order:1}.hero h1{order:2}.hero .pricebox{order:3}.hero .sub{order:4}
   .herowrap h1{font-size:clamp(25px,7vw,34px)}
   .hero .pricebox{padding:16px 16px;gap:10px}
-  .hero .pricebox .tag,.hero .pricebox .price{display:none}
 }
 @media (prefers-reduced-motion:reduce){.track{scroll-behavior:auto}.btn::before,.ticker div,.hero .pill i,.lote i{animation:none}}
 </style>
@@ -275,8 +274,6 @@ function loadTrackers(){
       <p class="sub"><strong>Não é justo. Mas dá para mudar</strong>, e não precisa de dancinha, nem de virar outra pessoa. <span style="color:var(--gold);font-weight:700">No sábado, 14/11, você aprende a ser encontrada por quem você pode ajudar.</span></p>
     </div>
     <div class="pricebox">
-      <span class="tag">Ingresso ao vivo</span>
-      <div class="price">R$ 29,97</div>
       <span class="changes" data-needs-deadline hidden>Esse preço muda em</span>
       <div class="count" data-needs-deadline hidden aria-label="Tempo até o preço mudar">
         <div><b data-u="d">02</b><span>dias</span></div>
@@ -286,7 +283,7 @@ function loadTrackers(){
       </div>
       <a class="btn" href="https://pay.hotmart.com/Y108097135Q?off=z7z8hjjn&checkoutMode=10" data-cta="hero">Quero garantir minha vaga <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       <p class="fine">Garantia de 7 dias. Pagamento seguro.</p>
-      <p class="lote"><i></i><span>Esse lote vira em breve e o preço aumenta. Garanta a sua vaga por R$ 29,97.</span></p>
+      <p class="lote"><i></i><span>Esse lote vira em breve e o preço aumenta.</span></p>
     </div>
   </div>
 </section>
@@ -533,7 +530,7 @@ function loadTrackers(){
 
 <div class="sticky" id="sticky">
   <div class="row">
-    <div class="t">Ingresso ao vivo<b>R$ 29,97</b></div>
+    <div class="t" id="sticky-price" hidden>Ingresso ao vivo<b>R$ 29,97</b></div>
     <a class="btn" href="https://pay.hotmart.com/Y108097135Q?off=z7z8hjjn&checkoutMode=10" data-cta="sticky">Quero minha vaga <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
   </div>
 </div>
@@ -559,6 +556,8 @@ function loadTrackers(){
 
   [].forEach.call(document.querySelectorAll('[data-crp]'), function(el){ el.textContent = CONFIG.CRP ? '· ' + CONFIG.CRP : ''; });
 
+  var hw = document.querySelector('.herowrap'), sp = document.getElementById('sticky-price');
+  if (hw && sp && 'IntersectionObserver' in window) new IntersectionObserver(function(e){ sp.hidden = e[0].isIntersecting; }).observe(hw); else if (sp) sp.hidden = false;
   var st = document.getElementById('sticky'), ing = document.getElementById('ingresso');
   if ('IntersectionObserver' in window) new IntersectionObserver(function(e){ st.hidden = e[0].isIntersecting; }).observe(ing);
 
